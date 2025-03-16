@@ -135,6 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+CAPA-Match-venv/
 
 # Spyder project settings
 .spyderproject
