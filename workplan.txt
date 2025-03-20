@@ -1,0 +1,57 @@
+1. Environment Setup & Basic Binary Loading
+    Tasks:
+
+    Confirm you can run Binary Ninja in headless mode.
+    Write a minimal script that:
+    Imports the Binary Ninja API.
+    Loads a binary file.
+    Prints a basic property (like the binary’s length).
+    Deliverable:
+    A script that accepts a binary path, loads the binary, and prints its size.
+
+2. Basic Binary Analysis – Listing Functions
+    Tasks:
+
+    Expand your script to run Binary Ninja’s analysis.
+    List the functions (names and addresses) discovered in the binary.
+    Verify that the output correctly shows function information.
+    Deliverable:
+    A script that loads a binary, waits for analysis, and prints each function’s name and starting address.
+
+3. Integrate CAPA Engine – Running CAPA Analysis
+    Tasks:
+
+    Import CAPA modules (e.g. capa.rules and capa.main).
+    Load the external CAPA rules (ensure you have the YAML rule repository on your computer).
+    Write code that extracts the binary’s data and passes it (via a temporary file) to the CAPA engine.
+    Print the raw CAPA analysis output.
+    Deliverable:
+    A script that loads the binary, extracts its data, runs CAPA analysis, and prints the resulting CAPA output.
+
+4. Map CAPA Results to Functions and Instructions
+    Tasks:
+
+    For each CAPA match, determine which function contains the violation using Binary Ninja’s API.
+    Extract the disassembled instruction at the violation address.
+    Output a mapping: CAPA rule, violation address, function name (and start address), plus the instruction.
+    Deliverable:
+    A script that, for each CAPA violation, prints the associated function and disassembly.
+
+5. Final Integration, Error Handling, and Logging
+    Tasks:
+
+    Combine all previous components into one cohesive script.
+    Add robust error handling and logging.
+    Ensure the script can run headlessly, outputting clear results (or saving to a file if desired).
+    Deliverable:
+    A final, integrated script that loads a binary, runs analysis, maps CAPA results to functions/instructions, and handles errors gracefully.
+
+6. Final Testing, Documentation, and Polish
+    Tasks:
+    
+    Test your final script on multiple sample binaries.
+    Add detailed comments and documentation to your code.
+    Refine logging messages and any user-facing output.
+    Prepare any README or usage instructions if needed.
+    Deliverable:
+    A polished, well-documented project ready for deployment.
