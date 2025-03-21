@@ -12,4 +12,8 @@ I took on this project with the goal of learning how to interface with a large p
 &nbsp;&nbsp;&nbsp;&nbsp; Learning to properly read documentation for APIs is a key skill, and something I really want to develop for my future self.
 
 3. Increase my understanding of the Reverse-Engineering World  
-&nbsp;&nbsp;&nbsp;&nbsp; With a career interest in Reverse-Engineering, Digital Forensics, and Incident Response, Learning Reverse-Engineering concepts and developing skills with RE tools, I can best prepare for my future career.
+&nbsp;&nbsp;&nbsp;&nbsp; With a career interest in Reverse-Engineering, Digital Forensics, and Incident Response, Learning Reverse-Engineering concepts and developing skills with RE tools, I can best prepare for my future career.  
+
+**Challenges I faced**  
+1. I initially faced challenges integrating binary ninja into my development environment, but I just had the wrong license. Additionally their linux install script made it super easy.   
+2. Lack of flare-capa library documentation. This library appears to have very little useful public documentation. I think it's because they just expect you to use it as a standalone executable. 

@@ -1,3 +1,9 @@
+#Plugin Artifacts
+plugin_output/
+capa-rules-9.1.0/
+CAPAvenv/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
