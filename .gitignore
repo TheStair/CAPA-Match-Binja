@@ -3,6 +3,9 @@ plugin_output/
 capa-rules-9.1.0/
 CAPAvenv/
 
+debugging_artifacts/
+function_jsons/
+matched_functions/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
