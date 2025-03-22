@@ -46,6 +46,8 @@ def get_input_file():
 
 # Runs CAPA Analysis and returns a JSON for each function with a match.
 # Each JSON contains the function name, address, matched rules, and disassembly
+# After looking throught the CAPA repo, I found that capa has a binary ninja backend. So to avoid wrestling
+# with different address spaces, I opted to use their binja backend
 def capa_analyze(file_path):
     print("Running CAPA Analysis")
     rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
