@@ -115,8 +115,9 @@ def capa_analyze(file_path):
     print(f"Matched functions stored in {output_dir}/")
 
 
-
-#Script Start
+# ------------------------------------------------------------------------------------------------------------
+# Script Start
+# ------------------------------------------------------------------------------------------------------------
 #Loads user-specified file
 input_file = get_input_file()
 with load(input_file) as bv:
