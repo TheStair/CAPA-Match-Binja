@@ -50,11 +50,12 @@ def get_input_file():
 # with different address spaces, I opted to use their binja backend
 def capa_analyze(file_path):
     print("Running CAPA Analysis")
-    rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
+    rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
+    # rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
     #Sets capa's path to the rules
     rules = capa.rules.get_rules([rules_path])
 
-    #Sets the extractor CAPA will use
+    #Sets the extractor CAPA will use 
     extractor = capa.loader.get_extractor(file_path, "auto", "auto", capa.main.BACKEND_BINJA, [], False, disable_progress=True,)
     
     #Runs the actual Analysis
@@ -64,8 +65,12 @@ def capa_analyze(file_path):
 
     
     # Fetches additional data (Not really used)
-    meta = capa.loader.collect_metadata(
-            [], file_path, "auto", "auto", [rules_path], extractor, counts)
+    # meta = capa.loader.collect_metadata(
+    #         [], file_path, "auto", "auto", [rules_path], extractor, counts)
+    
+    with load(input_file) as bv:
+        print("Loaded file into Binary Ninja")
+
 
     function_data = {}
     for rule_name, match_list in capabilities.matches.items():
@@ -122,8 +127,6 @@ def capa_analyze(file_path):
 # ------------------------------------------------------------------------------------------------------------
 #Loads user-specified file
 input_file = get_input_file()
-with load(input_file) as bv:
-    print("Loaded file into Binary Ninja")
 
 
 # Make output folder

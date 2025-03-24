@@ -17,3 +17,4 @@ I took on this project with the goal of learning how to interface with a large p
 **Challenges I faced**  
 1. I initially faced challenges integrating binary ninja into my development environment, but I just had the wrong license. Additionally their linux install script made it super easy.   
 2. Lack of flare-capa library documentation. This library appears to have very little useful public documentation. I think it's because they just expect you to use it as a standalone executable. 
+3. Compute resources. Binary ninja analysis takes up a lot of RAM, and CAPA also loads the program into binja. On my laptop, after a certain size, CAPA fails to process the binary. For example, on my laptop files like /bin/ls or /bin/grep work, meanwhile /bin/bash for some reason is killed by the OS or python interpreter
