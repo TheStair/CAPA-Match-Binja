@@ -1,0 +1,42 @@
+{
+  "address": "0x41790",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "mov     rbx, qword [rel data_161a80]",
+    "test    rbx, rbx",
+    "je      0x417e0",
+    "mov     edi, 0x5",
+    "call    malloc",
+    "mov     rbx, rax",
+    "test    rax, rax",
+    "jne     0x417a9",
+    "lea     rdx, [rel interactive_comments]",
+    "xor     eax, eax",
+    "lea     rcx, [rel data_156600]",
+    "nop     dword [rax]",
+    "mov     esi, 0x5",
+    "lea     rdi, [rel data_11f01e]  {\"xmalloc\"}",
+    "xor     eax, eax",
+    "call    sub_a7f00",
+    "{ Does not return }",
+    "mov     edx, dword [rdx]",
+    "mov     byte [rbx+rax], dl",
+    "add     rax, 0x1",
+    "mov     rdx, qword [rcx+rax*8]",
+    "test    rdx, rdx",
+    "jne     0x417c0",
+    "mov     qword [rel data_161a80], rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

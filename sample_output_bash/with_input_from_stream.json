@@ -1,0 +1,15 @@
+{
+  "address": "0x34dc0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     r8, rdi",
+    "mov     rcx, rsi",
+    "mov     edx, 0x2",
+    "lea     rsi, [rel sub_34520]",
+    "lea     rdi, [rel sub_36d00]",
+    "jmp     init_yy_io"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "address": "0xfb4b0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "push    rbx",
+    "mov     ebx, edi",
+    "movzx   r12d, bl",
+    "call    __ctype_b_loc",
+    "mov     rax, qword [rax]",
+    "test    byte [rax+r12*2+0x1], 0x2",
+    "je      0xfb4dd",
+    "mov     eax, ebx",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "call    __ctype_toupper_loc",
+    "mov     rax, qword [rax]",
+    "mov     ebx, dword [rax+r12*4]"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "address": "0xb07f0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     edx, 0x5",
+    "lea     rsi, [rel data_120b45]  {\"too many arguments\"}",
+    "xor     edi, edi",
+    "mov     rbp, rsp",
+    "call    dcgettext",
+    "mov     rdi, rax",
+    "xor     eax, eax",
+    "call    builtin_error",
+    "call    top_level_cleanup",
+    "mov     edi, 0x2",
+    "call    jump_to_top_level",
+    "{ Does not return }"
+  ]
+}

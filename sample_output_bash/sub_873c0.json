@@ -1,0 +1,17 @@
+{
+  "address": "0x873c0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "xor     eax, eax",
+    "mov     rbp, rsp",
+    "call    builtin_error",
+    "mov     esi, 0x1",
+    "lea     rdi, [rel data_1687c0]",
+    "mov     dword [rel data_168888], 0x2",
+    "call    __longjmp_chk",
+    "{ Does not return }"
+  ]
+}

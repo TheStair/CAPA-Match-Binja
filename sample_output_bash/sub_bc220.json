@@ -1,0 +1,15 @@
+{
+  "address": "0xbc220",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel read_timeout]",
+    "mov     rax, qword [rax]",
+    "test    rax, rax",
+    "je      0xbc23a",
+    "retn    ",
+    "mov     dword [rax+0x18], 0x1"
+  ]
+}

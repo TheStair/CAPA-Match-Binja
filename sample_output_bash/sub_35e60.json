@@ -1,0 +1,39 @@
+{
+  "address": "0x35e60",
+  "rules": [
+    "check if file exists/33e235b3e802457492251bc0c05ce35e/2e923016c5754d05a3af5b3b8024a7e6"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "lea     rax, [rel enable_history_list]",
+    "cmp     dword [rax], 0xffffffff",
+    "mov     rbp, rsp",
+    "jne     0x35e74",
+    "xor     edi, edi",
+    "call    bash_history_reinit",
+    "lea     rax, [rel interactive]",
+    "lea     rdx, [rel expaliases_flag]",
+    "xor     edi, edi",
+    "mov     dword [rax], 0x0",
+    "lea     rax, [rel startup_state]",
+    "mov     dword [rax], 0x0",
+    "lea     rax, [rel interactive_shell]",
+    "mov     dword [rax], 0x0",
+    "lea     rax, [rel posixly_correct]",
+    "mov     eax, dword [rax]",
+    "mov     dword [rdx], eax",
+    "lea     rdx, [rel expand_aliases]",
+    "mov     dword [rdx], eax",
+    "lea     rax, [rel no_line_editing]",
+    "lea     rdx, [rel jobs_m_flag]",
+    "mov     dword [rax], 0x1",
+    "lea     rax, [rel forced_interactive]",
+    "pop     rbp",
+    "mov     eax, dword [rax]",
+    "or      eax, dword [rdx]",
+    "setne   dil",
+    "jmp     set_job_control",
+    "xor     edx, edx",
+    "mov     dword [rax], edx"
+  ]
+}

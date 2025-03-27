@@ -1,0 +1,22 @@
+{
+  "address": "0xd4940",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rdi]",
+    "xor     edx, edx",
+    "sub     eax, 0x21",
+    "cmp     eax, 0x1f",
+    "ja      0xd4964",
+    "mov     eax, edx",
+    "retn    ",
+    "mov     ecx, 0xc0000601",
+    "bt      rcx, rax",
+    "jae     0xd4964",
+    "xor     edx, edx",
+    "cmp     dword [rdi+0x4], 0x28",
+    "sete    dl"
+  ]
+}

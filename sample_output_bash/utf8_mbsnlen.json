@@ -1,0 +1,38 @@
+{
+  "address": "0xd9ec0",
+  "rules": [
+    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "movzx   eax, byte [rdi]",
+    "test    edx, edx",
+    "js      0xd9f10",
+    "xor     esi, esi",
+    "mov     eax, esi",
+    "retn    ",
+    "test    al, al",
+    "je      0xd9f10",
+    "mov     ecx, 0x1",
+    "xor     esi, esi",
+    "nop     word [rax+rax]",
+    "and     eax, 0xc0",
+    "cmp     eax, 0x80",
+    "setne   al",
+    "movzx   eax, al",
+    "add     esi, eax",
+    "movzx   eax, byte [rdi+rcx]",
+    "cmp     edx, ecx",
+    "setge   r9b",
+    "test    al, al",
+    "setne   r8b",
+    "add     rcx, 0x1",
+    "test    r9b, r8b",
+    "jne     0xd9ee0",
+    "mov     eax, esi",
+    "retn    "
+  ]
+}

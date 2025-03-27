@@ -1,0 +1,18 @@
+{
+  "address": "0xbc4d0",
+  "rules": [
+    "allocate or change RW memory/b4e5a298cb404535abd304755b86823e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rdx, [rdi+0x4]",
+    "mov     edi, dword [rdi]",
+    "mov     esi, 0x1",
+    "mov     rbp, rsp",
+    "call    tcsetattr",
+    "pop     rbp",
+    "mov     dword [rel data_161190], 0x0",
+    "retn    "
+  ]
+}

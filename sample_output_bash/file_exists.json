@@ -1,0 +1,27 @@
+{
+  "address": "0x42310",
+  "rules": [
+    "get file attributes"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "sub     rsp, 0xa0",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x8], rax",
+    "xor     eax, eax",
+    "lea     rsi, [rbp-0xa0]",
+    "call    stat",
+    "test    eax, eax",
+    "sete    al",
+    "mov     rdx, qword [rbp-0x8]",
+    "sub     rdx, qword [fs:0x28]",
+    "jne     0x42353",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "leave   ",
+    "movzx   eax, al",
+    "retn    "
+  ]
+}

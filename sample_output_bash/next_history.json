@@ -1,0 +1,23 @@
+{
+  "address": "0x1055f0",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rdx, [rel history_offset]",
+    "lea     rcx, [rel history_length]",
+    "mov     eax, dword [rdx]",
+    "cmp     eax, dword [rcx]",
+    "je      0x105620",
+    "xor     eax, eax",
+    "retn    ",
+    "add     eax, 0x1",
+    "mov     dword [rdx], eax",
+    "mov     rdx, qword [rel data_1688b8]",
+    "cdqe    ",
+    "mov     rax, qword [rdx+rax*8]",
+    "retn    "
+  ]
+}

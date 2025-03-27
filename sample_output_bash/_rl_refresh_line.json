@@ -1,0 +1,30 @@
+{
+  "address": "0xf9eb0",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    rl_clear_visible_line",
+    "lea     rax, [rel rl_display_prompt]",
+    "mov     esi, 0xa",
+    "mov     rdi, qword [rax]",
+    "call    strrchr",
+    "test    rax, rax",
+    "je      0xf9ef0",
+    "call    rl_forced_update_display",
+    "lea     rax, [rel _rl_keep_mark_active]",
+    "add     dword [rax], 0x1",
+    "pop     rbp",
+    "retn    ",
+    "lea     rdi, [rax+0x1]",
+    "call    sub_f9c70",
+    "lea     rax, [rel _rl_keep_mark_active]",
+    "add     dword [rax], 0x1",
+    "pop     rbp",
+    "retn    "
+  ]
+}

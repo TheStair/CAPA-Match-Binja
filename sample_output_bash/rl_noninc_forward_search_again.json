@@ -1,0 +1,42 @@
+{
+  "address": "0xe8d00",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rdi, qword [rel data_16a5e0]",
+    "mov     rbp, rsp",
+    "test    rdi, rdi",
+    "je      0xe8d50",
+    "call    rl_ding",
+    "mov     eax, 0x1",
+    "pop     rbp",
+    "retn    ",
+    "lea     rax, [rel rl_editing_mode]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "jne     0xe8d39",
+    "xor     edx, edx",
+    "mov     esi, 0x1",
+    "call    sub_e8920",
+    "lea     rax, [rel _rl_keymap]",
+    "lea     rcx, [rel vi_movement_keymap]",
+    "cmp     qword [rax], rcx",
+    "jne     0xe8d39",
+    "cmp     esi, 0x4e",
+    "je      0xe8d60",
+    "mov     edx, 0x10",
+    "mov     esi, 0x1",
+    "call    sub_e8920",
+    "jmp     0xe8d45",
+    "cmp     eax, 0x1",
+    "pop     rbp",
+    "setne   al",
+    "movzx   eax, al",
+    "retn    "
+  ]
+}

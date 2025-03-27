@@ -1,0 +1,10 @@
+{
+  "address": "0x30e30",
+  "rules": [
+    "delete file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel unlink]"
+  ]
+}

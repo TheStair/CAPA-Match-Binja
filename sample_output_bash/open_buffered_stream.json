@@ -1,0 +1,23 @@
+{
+  "address": "0x88f40",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "create or open file"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "xor     esi, esi",
+    "xor     eax, eax",
+    "mov     rbp, rsp",
+    "call    open",
+    "test    eax, eax",
+    "js      0x88f60",
+    "xor     eax, eax",
+    "pop     rbp",
+    "retn    ",
+    "mov     edi, eax",
+    "pop     rbp",
+    "jmp     fd_to_buffered_stream"
+  ]
+}

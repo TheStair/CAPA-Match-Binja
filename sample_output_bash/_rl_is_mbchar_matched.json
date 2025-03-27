@@ -1,0 +1,33 @@
+{
+  "address": "0x1052e0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "sub     edx, esi",
+    "xor     eax, eax",
+    "cmp     edx, r8d",
+    "jl      0x105315",
+    "retn    ",
+    "test    r8d, r8d",
+    "jle     0x105320",
+    "mov     eax, 0x1",
+    "retn    ",
+    "movsxd  rsi, esi",
+    "movsxd  r8, r8d",
+    "xor     eax, eax",
+    "lea     rdx, [rdi+rsi]",
+    "jmp     0x105309",
+    "movzx   edi, byte [rcx+rax]",
+    "cmp     byte [rdx+rax], dil",
+    "je      0x105300",
+    "add     rax, 0x1",
+    "cmp     r8, rax",
+    "je      0x105320",
+    "xor     eax, eax"
+  ]
+}

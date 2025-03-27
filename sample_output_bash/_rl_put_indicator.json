@@ -1,0 +1,15 @@
+{
+  "address": "0x1108b0",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel rl_outstream]",
+    "mov     rsi, qword [rdi]",
+    "mov     edx, 0x1",
+    "mov     rdi, qword [rdi+0x8]",
+    "mov     rcx, qword [rax]",
+    "jmp     fwrite"
+  ]
+}

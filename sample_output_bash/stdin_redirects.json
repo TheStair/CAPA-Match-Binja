@@ -1,0 +1,42 @@
+{
+  "address": "0xa7150",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "contain loop",
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "xor     edx, edx",
+    "test    rdi, rdi",
+    "je      0xa71a4",
+    "mov     eax, edx",
+    "retn    ",
+    "mov     esi, 0x1",
+    "jmp     0xa717e",
+    "test    byte [rdi+0x10], 0x1",
+    "jne     0xa7176",
+    "mov     rdi, qword [rdi]",
+    "test    rdi, rdi",
+    "je      0xa71a4",
+    "mov     ecx, dword [rdi+0x18]",
+    "cmp     ecx, 0xd",
+    "ja      0xa7176",
+    "mov     rax, rsi",
+    "shl     rax, cl",
+    "test    eax, 0x936",
+    "je      0xa7168",
+    "test    eax, 0x2240",
+    "je      0xa7176",
+    "mov     rdi, qword [rdi]",
+    "add     edx, 0x1",
+    "test    rdi, rdi",
+    "jne     0xa717e",
+    "cmp     dword [rdi+0x8], 0x1",
+    "adc     edx, 0x0"
+  ]
+}

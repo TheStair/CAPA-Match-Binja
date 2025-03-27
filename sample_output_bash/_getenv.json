@@ -1,0 +1,10 @@
+{
+  "address": "0xdac40",
+  "rules": [
+    "query environment variable"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     getenv"
+  ]
+}

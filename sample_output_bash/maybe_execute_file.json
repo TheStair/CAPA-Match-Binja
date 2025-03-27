@@ -1,0 +1,35 @@
+{
+  "address": "0xb70b0",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12d, esi",
+    "xor     esi, esi",
+    "push    rbx",
+    "call    bash_tilde_expand",
+    "cmp     r12d, 0x1",
+    "sbb     esi, esi",
+    "mov     rbx, rax",
+    "mov     rdi, rax",
+    "xor     eax, eax",
+    "and     esi, 0xfffffff8",
+    "add     esi, 0x9",
+    "call    sub_b6240",
+    "mov     rdi, rbx",
+    "mov     r12d, eax",
+    "call    free",
+    "mov     eax, r12d",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ]
+}

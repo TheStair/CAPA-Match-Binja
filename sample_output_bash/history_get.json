@@ -1,0 +1,24 @@
+{
+  "address": "0x1058b0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel history_base]",
+    "sub     edi, dword [rax]",
+    "lea     rax, [rel history_length]",
+    "cmp     dword [rax], edi",
+    "jle     0x1058e0",
+    "xor     eax, eax",
+    "test    edi, edi",
+    "js      0x1058e0",
+    "mov     rax, qword [rel data_1688b8]",
+    "test    rax, rax",
+    "je      0x1058e2",
+    "retn    ",
+    "movsxd  rdi, edi",
+    "mov     rax, qword [rax+rdi*8]",
+    "retn    "
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "address": "0xfbba0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel rl_executing_macro]",
+    "mov     rdi, qword [rbx]",
+    "test    rdi, rdi",
+    "je      0xfbbc1",
+    "mov     rdi, qword [rel data_16adf0]",
+    "mov     qword [rbx], 0x0",
+    "mov     dword [rel data_16a4f8], 0x0",
+    "test    rdi, rdi",
+    "je      0xfbc10",
+    "call    free",
+    "sub     dword [rel data_16adf8], 0x1",
+    "mov     rax, qword [rdi+0x8]",
+    "mov     qword [rbx], rax",
+    "mov     eax, dword [rdi+0x10]",
+    "mov     dword [rel data_16a4f8], eax",
+    "mov     rax, qword [rdi]",
+    "mov     qword [rel data_16adf0], rax",
+    "call    free",
+    "sub     dword [rel data_16adf8], 0x1",
+    "cmp     qword [rbx], 0x0",
+    "je      0xfbc17",
+    "lea     rax, [rel rl_readline_state]",
+    "mov     rbx, qword [rbp-0x8]",
+    "and     qword [rax], 0xfffffffffffff7ff",
+    "leave   ",
+    "retn    ",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

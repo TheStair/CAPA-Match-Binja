@@ -1,0 +1,40 @@
+{
+  "address": "0x108240",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel _rl_term_clrpag]",
+    "mov     rdi, qword [rax]",
+    "test    rdi, rdi",
+    "je      0x1082b0",
+    "lea     rax, [rel _rl_out_stream]",
+    "mov     edi, 0xa",
+    "mov     rsi, qword [rax]",
+    "call    putc",
+    "jmp     0x10828c",
+    "lea     rbx, [rel _rl_output_character_function]",
+    "mov     esi, 0x1",
+    "mov     rdx, rbx",
+    "call    tputs",
+    "lea     rax, [rel _rl_term_clrscroll]",
+    "mov     rdi, qword [rax]",
+    "test    rdi, rdi",
+    "je      0x10828c",
+    "call    rl_forced_update_display",
+    "lea     rax, [rel rl_display_fixed]",
+    "mov     rbx, qword [rbp-0x8]",
+    "mov     dword [rax], 0x1",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    ",
+    "mov     rdx, rbx",
+    "mov     esi, 0x1",
+    "call    tputs"
+  ]
+}

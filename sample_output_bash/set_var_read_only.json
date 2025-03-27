@@ -1,0 +1,40 @@
+{
+  "address": "0x5d410",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "call    find_variable",
+    "test    rax, rax",
+    "je      0x5d440",
+    "xor     edx, edx",
+    "lea     rsi, [rel data_122e02]",
+    "mov     rdi, rbx",
+    "call    bind_variable",
+    "test    rax, rax",
+    "je      0x3205d",
+    "mov     edx, dword [rax+0x28 {Elf64_Header::section_header_offset.d}]",
+    "mov     rbx, qword [rbp-0x8]",
+    "or      edx, 0x2",
+    "mov     dword [rax+0x28 {Elf64_Header::section_header_offset.d}], edx",
+    "leave   ",
+    "retn    ",
+    "mov     eax, dword [0x28]",
+    "ud2     ",
+    "{ Does not return }",
+    "mov     edx, dword [rax+0x28]",
+    "mov     rbx, qword [rbp-0x8]",
+    "or      dh, 0x10",
+    "mov     dword [rax+0x28], edx",
+    "or      edx, 0x2",
+    "mov     dword [rax+0x28], edx",
+    "leave   ",
+    "retn    "
+  ]
+}

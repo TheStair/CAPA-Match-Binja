@@ -1,0 +1,13 @@
+{
+  "address": "0x41f00",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     edx, 0x1",
+    "mov     esi, 0x2",
+    "xor     eax, eax",
+    "jmp     fcntl"
+  ]
+}

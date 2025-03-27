@@ -1,0 +1,10 @@
+{
+  "address": "0x31a20",
+  "rules": [
+    "get hostname"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel gethostname]"
+  ]
+}

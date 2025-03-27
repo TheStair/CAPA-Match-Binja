@@ -1,0 +1,30 @@
+{
+  "address": "0x52690",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     ebx, edi",
+    "lea     rdi, [rel data_11f2f1]  {\"FUNCNAME\"}",
+    "sub     rsp, 0x8",
+    "call    find_variable",
+    "test    rax, rax",
+    "je      0x526ca",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "cmp     qword [rax+0x18 {Elf64_Header::entry}], 0x0",
+    "je      0x526ca",
+    "mov     edx, dword [rax+0x28 {Elf64_Header::section_header_offset.d}]",
+    "mov     ecx, edx",
+    "and     dh, 0xef",
+    "or      ch, 0x10",
+    "test    ebx, ebx",
+    "cmove   edx, ecx",
+    "mov     dword [rax+0x28 {Elf64_Header::section_header_offset.d}], edx"
+  ]
+}

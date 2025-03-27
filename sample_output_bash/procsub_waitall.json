@@ -1,0 +1,30 @@
+{
+  "address": "0x65fb0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel procsubs]",
+    "mov     rbx, qword [rax]",
+    "test    rbx, rbx",
+    "je      0x65fe9",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "nop     dword [rax]",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "jne     0x65fd0",
+    "mov     edi, dword [rbx+0x8]",
+    "xor     esi, esi",
+    "call    wait_for",
+    "mov     eax, dword [rbx+0x10]",
+    "test    eax, eax",
+    "je      0x65fe1"
+  ]
+}

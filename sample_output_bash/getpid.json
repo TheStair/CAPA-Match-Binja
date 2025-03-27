@@ -1,0 +1,10 @@
+{
+  "address": "0x31120",
+  "rules": [
+    "get current PID on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel getpid]"
+  ]
+}

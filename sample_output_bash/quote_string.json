@@ -1,0 +1,32 @@
+{
+  "address": "0x73050",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     byte [rdi], 0x0",
+    "jne     0x73088",
+    "jmp     sub_87450",
+    "push    rbp",
+    "mov     edi, 0x2",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "call    malloc",
+    "mov     rbx, rax",
+    "test    rax, rax",
+    "je      0x7308d",
+    "mov     esi, 0x2",
+    "lea     rdi, [rel data_11f01e]  {\"xmalloc\"}",
+    "xor     eax, eax",
+    "call    sub_a7f00",
+    "{ Does not return }",
+    "mov     eax, 0x7f",
+    "mov     word [rbx], ax",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

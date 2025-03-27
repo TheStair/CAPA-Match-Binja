@@ -1,0 +1,19 @@
+{
+  "address": "0x44740",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel sh_coproc]",
+    "cmp     edi, dword [rax+0x8]",
+    "jne     0x44766",
+    "retn    ",
+    "mov     edx, dword [rax+0x1c]",
+    "mov     dword [rax+0x20], esi",
+    "mov     dword [rax+0x24], 0x0",
+    "and     edx, 0xfffffffe",
+    "or      edx, 0x2",
+    "mov     dword [rax+0x1c], edx"
+  ]
+}

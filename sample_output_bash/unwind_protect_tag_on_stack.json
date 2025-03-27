@@ -1,0 +1,38 @@
+{
+  "address": "0x89390",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, qword [rel data_161a50]",
+    "test    rbx, rbx",
+    "je      0x893e0",
+    "xor     eax, eax",
+    "mov     r12, rdi",
+    "jmp     0x893b8",
+    "cmp     qword [rbx+0x8], 0x0",
+    "jne     0x893b0",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "je      0x893e0",
+    "mov     rdi, qword [rbx+0x10]",
+    "movzx   eax, byte [r12]",
+    "cmp     byte [rdi], al",
+    "jne     0x893b0",
+    "mov     rsi, r12",
+    "call    strcmp",
+    "test    eax, eax",
+    "jne     0x893b0",
+    "mov     eax, 0x1",
+    "jmp     0x893e2",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ]
+}

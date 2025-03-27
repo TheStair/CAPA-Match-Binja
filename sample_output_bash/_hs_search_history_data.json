@@ -1,0 +1,30 @@
+{
+  "address": "0x105ff0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel history_length]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "je      0x10602f",
+    "mov     eax, 0xffffffff",
+    "mov     rcx, qword [rel data_1688b8]",
+    "test    rcx, rcx",
+    "je      0x10602f",
+    "sub     eax, 0x1",
+    "js      0x10602f",
+    "cdqe    ",
+    "nop     dword [rax]",
+    "sub     rax, 0x1",
+    "test    eax, eax",
+    "jns     0x106018",
+    "cmp     qword [rdx+0x10], rdi",
+    "je      0x106034",
+    "mov     rdx, qword [rcx+rax*8]",
+    "test    rdx, rdx",
+    "je      0x106027",
+    "retn    "
+  ]
+}

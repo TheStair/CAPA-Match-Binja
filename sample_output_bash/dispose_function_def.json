@@ -1,0 +1,26 @@
+{
+  "address": "0x47370",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "mov     rdi, qword [rdi+0x8]",
+    "call    dispose_word",
+    "mov     rdi, qword [rbx+0x10]",
+    "call    dispose_command",
+    "mov     rdi, qword [rbx+0x18]",
+    "test    rdi, rdi",
+    "je      0x473a0",
+    "mov     rdi, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "jmp     free",
+    "call    free"
+  ]
+}

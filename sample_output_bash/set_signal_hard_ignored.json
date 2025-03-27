@@ -1,0 +1,15 @@
+{
+  "address": "0x889b0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel data_1611a0]",
+    "movsxd  rdi, edi",
+    "or      dword [rax+rdi*4], 0x2",
+    "lea     rax, [rel original_signals]",
+    "mov     qword [rax+rdi*8], 0x1",
+    "retn    "
+  ]
+}

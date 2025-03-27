@@ -1,0 +1,14 @@
+{
+  "address": "0xfb3f0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "sub     edi, 0x30",
+    "xor     eax, eax",
+    "cmp     edi, 0x9",
+    "setbe   al",
+    "retn    "
+  ]
+}

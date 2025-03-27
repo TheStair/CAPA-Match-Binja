@@ -1,0 +1,43 @@
+{
+  "address": "0xa6fb0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    esi, esi",
+    "movsxd  rsi, esi",
+    "js      0xa6feb",
+    "mov     byte [rdi+rsi+0x1], 0x0",
+    "retn    ",
+    "movzx   eax, byte [rdi+rsi]",
+    "test    edx, edx",
+    "jne     0xa700b",
+    "cmp     al, 0xa",
+    "je      0xa6ff8",
+    "cmp     al, 0x20",
+    "jne     0xa6fe7",
+    "mov     eax, esi",
+    "lea     rdx, [rsi-0x1]",
+    "sub     eax, 0x1",
+    "js      0xa7018",
+    "jmp     0xa6feb",
+    "cmp     al, 0x9",
+    "je      0xa6fd0",
+    "nop     word [rax+rax]",
+    "sub     esi, 0x1",
+    "movsxd  rsi, esi",
+    "mov     byte [rdi+rsi+0x1], 0x0",
+    "retn    ",
+    "movzx   eax, byte [rdi+rsi-0x1]",
+    "mov     rsi, rdx",
+    "mov     eax, esi",
+    "lea     rdx, [rsi-0x1]",
+    "sub     eax, 0x1",
+    "js      0xa7018",
+    "movzx   eax, byte [rdi+rsi-0x1]",
+    "mov     rsi, rdx",
+    "cmp     al, 0x20",
+    "je      0xa6fd0"
+  ]
+}

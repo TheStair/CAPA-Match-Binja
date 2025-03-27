@@ -1,0 +1,43 @@
+{
+  "address": "0x51ef0",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
+    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x18",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x18], rax",
+    "xor     eax, eax",
+    "test    rsi, rsi",
+    "je      0x51f1c",
+    "xor     edx, edx",
+    "cmp     byte [rsi], 0x0",
+    "mov     rdi, rsi",
+    "jne     0x51f40",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "lea     rsi, [rbp-0x20]",
+    "call    legal_number",
+    "test    eax, eax",
+    "je      0x51f1c",
+    "mov     edx, dword [rbp-0x20]",
+    "jmp     0x51f1e",
+    "lea     rax, [rel subshell_level]",
+    "mov     dword [rax], edx",
+    "mov     rax, qword [rbp-0x18]",
+    "sub     rax, qword [fs:0x28]",
+    "jne     0x51f52"
+  ]
+}

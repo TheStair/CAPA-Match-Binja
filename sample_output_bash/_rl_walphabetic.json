@@ -1,0 +1,33 @@
+{
+  "address": "0xfae60",
+  "rules": [
+    "encrypt data using Curve25519/71854cb5ec3d414da844548a1a695b22"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     ebx, edi",
+    "sub     rsp, 0x8",
+    "call    iswalnum",
+    "mov     edx, eax",
+    "mov     eax, 0x1",
+    "test    edx, edx",
+    "jne     0xfaea6",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "lea     rax, [rel _rl_allow_pathname_alphabetic_chars]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "je      0xfaea6",
+    "mov     esi, ebx",
+    "lea     rdi, [rel data_122a74]  {\"/-_=~.#$\"}",
+    "and     esi, 0x7f",
+    "call    strchr",
+    "test    rax, rax",
+    "setne   al",
+    "movzx   eax, al"
+  ]
+}

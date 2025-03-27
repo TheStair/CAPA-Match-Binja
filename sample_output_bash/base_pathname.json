@@ -1,0 +1,36 @@
+{
+  "address": "0x424a0",
+  "rules": [
+    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe",
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "cmp     byte [rdi], 0x2f",
+    "je      0x424e0",
+    "cmp     byte [rdi+0x1], 0x0",
+    "mov     rax, rdi",
+    "jne     0x424b5",
+    "mov     rdi, rbx",
+    "mov     esi, 0x2f",
+    "call    strrchr",
+    "lea     rdx, [rax+0x1]",
+    "test    rax, rax",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "cmovne  rax, rdx",
+    "retn    ",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

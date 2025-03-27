@@ -1,0 +1,43 @@
+{
+  "address": "0xf9c70",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "lea     r12, [rel rl_display_prompt]",
+    "mov     r13, qword [r12]",
+    "call    rl_save_prompt",
+    "mov     rdi, rbx",
+    "mov     qword [r12], rbx",
+    "lea     r9, [rel data_16a720]",
+    "lea     r8, [rel data_16a728]",
+    "lea     rcx, [rel data_16a724]",
+    "mov     esi, 0x1",
+    "lea     rdx, [rel data_16a71c]",
+    "call    sub_f3d00",
+    "mov     qword [rel data_16a730], 0x0",
+    "mov     rdi, rax",
+    "mov     qword [rel data_16a738], rax",
+    "xor     eax, eax",
+    "test    rdi, rdi",
+    "je      0xf9ce2",
+    "mov     dword [rel data_16a72c], eax",
+    "call    rl_forced_update_display",
+    "mov     qword [r12], r13",
+    "add     rsp, 0x8",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "jmp     rl_restore_prompt",
+    "call    strlen"
+  ]
+}

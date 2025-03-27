@@ -1,0 +1,18 @@
+{
+  "address": "0x744a0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rax, qword [rel data_1685a8]",
+    "movsxd  rdi, edi",
+    "lea     rax, [rax+rdi*4]",
+    "mov     edx, dword [rax]",
+    "test    edx, edx",
+    "je      0x744c5",
+    "retn    ",
+    "mov     dword [rax], 0x0",
+    "sub     dword [rel data_161064], 0x1"
+  ]
+}

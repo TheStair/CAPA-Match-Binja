@@ -1,0 +1,43 @@
+{
+  "address": "0x60160",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x601c0",
+    "xor     eax, eax",
+    "retn    ",
+    "push    rbp",
+    "xor     eax, eax",
+    "mov     rbp, rsp",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "nop     dword [rax]",
+    "mov     rdi, rbx",
+    "mov     r12, rax",
+    "call    copy_redirect",
+    "mov     qword [rax], r12",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "jne     0x60178",
+    "test    r12, r12",
+    "je      0x601b9",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "mov     qword [rax], 0x0",
+    "mov     rcx, rax",
+    "mov     rax, r12",
+    "jmp     0x601ab",
+    "mov     rdx, qword [rax]",
+    "mov     qword [rax], rcx",
+    "mov     rcx, rax",
+    "test    rdx, rdx",
+    "jne     0x601a8",
+    "mov     rax, rdx"
+  ]
+}

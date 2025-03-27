@@ -1,0 +1,39 @@
+{
+  "address": "0xe4fc0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel rl_completion_invoking_key]",
+    "mov     dword [rax], esi",
+    "lea     rax, [rel rl_inhibit_completion]",
+    "mov     r8d, dword [rax]",
+    "test    r8d, r8d",
+    "jne     0xe5040",
+    "jmp     _rl_insert_char",
+    "lea     rax, [rel rl_last_func]",
+    "lea     rdx, [rel rl_complete]",
+    "cmp     qword [rax], rdx",
+    "je      0xe5028",
+    "mov     ecx, dword [rel data_1689a8]",
+    "test    ecx, ecx",
+    "jne     0xe4fef",
+    "lea     rax, [rel _rl_complete_show_all]",
+    "mov     edx, dword [rax]",
+    "test    edx, edx",
+    "jne     0xe5048",
+    "mov     edi, 0x3f",
+    "jmp     rl_complete_internal",
+    "mov     edi, 0x21",
+    "jmp     rl_complete_internal",
+    "lea     rax, [rel _rl_complete_show_unmodified]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "je      0xe5018",
+    "mov     edi, 0x9",
+    "jmp     rl_complete_internal",
+    "mov     edi, 0x40",
+    "jmp     rl_complete_internal"
+  ]
+}

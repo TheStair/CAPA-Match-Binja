@@ -1,0 +1,30 @@
+{
+  "address": "0x562a0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     r8d, edx",
+    "mov     rbp, rsp",
+    "sub     rsp, 0x20",
+    "lea     rax, [rel shell_variables]",
+    "cmp     qword [rax], 0x0",
+    "je      0x562d8",
+    "mov     qword [rbp-0x10], rsi",
+    "mov     qword [rbp-0x8], rdi",
+    "mov     dword [rbp-0x14], edx",
+    "call    sub_51d30",
+    "mov     r8d, dword [rbp-0x14]",
+    "mov     rsi, qword [rbp-0x10]",
+    "mov     rdi, qword [rbp-0x8]",
+    "jmp     0x562bc",
+    "lea     rax, [rel global_variables]",
+    "xor     ecx, ecx",
+    "mov     rax, qword [rax]",
+    "mov     rdx, qword [rax+0x20]",
+    "leave   ",
+    "jmp     sub_55a00"
+  ]
+}

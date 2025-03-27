@@ -1,0 +1,39 @@
+{
+  "address": "0x345e0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "contain loop",
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "mov     rbp, rsp",
+    "nop     dword [rax]",
+    "pop     rbp",
+    "retn    ",
+    "lea     rax, [rel interactive]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "je      0x345e8",
+    "call    sub_1145f0",
+    "mov     dword [rel data_1608dc], eax",
+    "cmp     eax, 0xa",
+    "jne     0x34641",
+    "lea     rax, [rel bash_input]",
+    "mov     eax, dword [rax]",
+    "sub     eax, 0x1",
+    "cmp     eax, 0x1",
+    "ja      0x345e8",
+    "lea     rax, [rel pushed_string_list]",
+    "mov     rax, qword [rax]",
+    "test    rax, rax",
+    "je      0x3462c",
+    "call    sub_44ac0",
+    "call    sub_1145f0",
+    "mov     dword [rel data_1608dc], eax",
+    "cmp     eax, 0xa",
+    "je      0x345f8",
+    "cmp     qword [rax+0x18], 0x0",
+    "jne     0x345e8"
+  ]
+}

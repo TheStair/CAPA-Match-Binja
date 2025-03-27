@@ -1,0 +1,10 @@
+{
+  "address": "0x319a0",
+  "rules": [
+    "get system information on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel sysconf]"
+  ]
+}

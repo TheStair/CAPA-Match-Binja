@@ -1,0 +1,12 @@
+{
+  "address": "0xf89b0",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel _rl_out_stream]",
+    "mov     rsi, qword [rax]",
+    "jmp     putc"
+  ]
+}

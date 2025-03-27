@@ -1,0 +1,32 @@
+{
+  "address": "0xe0600",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     edi, 0x5d",
+    "je      0xe0650",
+    "mov     eax, 0xfffffffe",
+    "jg      0xe0630",
+    "mov     eax, 0x3",
+    "cmp     edi, 0x7b",
+    "je      0xe0655",
+    "mov     eax, 0xffffffff",
+    "cmp     edi, 0x29",
+    "je      0xe0655",
+    "retn    ",
+    "xor     eax, eax",
+    "cmp     edi, 0x7d",
+    "setne   al",
+    "lea     eax, [rax+rax*2-0x3]",
+    "retn    ",
+    "mov     eax, 0x2",
+    "cmp     edi, 0x5b",
+    "je      0xe0655",
+    "xor     eax, eax",
+    "cmp     edi, 0x28",
+    "sete    al",
+    "retn    "
+  ]
+}

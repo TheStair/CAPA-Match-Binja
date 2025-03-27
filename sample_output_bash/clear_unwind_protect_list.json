@@ -1,0 +1,25 @@
+{
+  "address": "0x89310",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     qword [rel data_161a50], 0x0",
+    "je      0x89360",
+    "retn    ",
+    "test    edi, edi",
+    "je      0x89350",
+    "mov     qword [rel data_161a50], 0x0",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "nop     word [rax+rax]",
+    "call    sub_111e50",
+    "cmp     qword [rel data_161a50], 0x0",
+    "jne     0x89330",
+    "mov     qword [rel data_161a50], 0x0",
+    "pop     rbp",
+    "retn    "
+  ]
+}

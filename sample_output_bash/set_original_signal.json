@@ -1,0 +1,24 @@
+{
+  "address": "0x88810",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     eax, [rdi-0x1]",
+    "cmp     eax, 0x3f",
+    "ja      0x88833",
+    "retn    ",
+    "lea     rax, [rel original_signals]",
+    "movsxd  rdi, edi",
+    "lea     rdx, [rel initialize_traps]",
+    "cmp     qword [rax+rdi*8], rdx",
+    "je      0x88838",
+    "mov     qword [rax+rdi*8], rsi",
+    "cmp     rsi, 0x1",
+    "jne     0x88833",
+    "lea     rax, [rel data_1611a0]",
+    "or      dword [rax+rdi*4], 0x2",
+    "retn    "
+  ]
+}

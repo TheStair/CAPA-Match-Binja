@@ -1,0 +1,33 @@
+{
+  "address": "0x66230",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "push    rbx",
+    "call    __errno_location",
+    "mov     r12d, dword [rax]",
+    "mov     rbx, rax",
+    "mov     eax, dword [rel data_1680c4]",
+    "add     dword [rel data_1680b0], 0x1",
+    "test    eax, eax",
+    "je      0x66260",
+    "xor     edi, edi",
+    "call    sub_11d600",
+    "mov     dword [rbx], r12d",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "mov     dword [rbx], r12d",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "address": "0x10bca0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    rl_save_prompt",
+    "lea     rdx, [rel rl_readline_state]",
+    "lea     rax, [rel _rl_argcxt]",
+    "mov     dword [rax], 0x0",
+    "mov     rax, qword [rdx]",
+    "mov     rcx, rax",
+    "or      ch, 0x4",
+    "mov     qword [rdx], rcx",
+    "lea     rdx, [rel rl_numeric_arg]",
+    "shl     dword [rdx], 0x2",
+    "test    eax, 0x80000",
+    "je      0x10bce8",
+    "pop     rbp",
+    "jmp     sub_10bb90",
+    "xor     eax, eax",
+    "pop     rbp",
+    "retn    "
+  ]
+}

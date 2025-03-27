@@ -1,0 +1,14 @@
+{
+  "address": "0xe9960",
+  "rules": [
+    "parse credit card information/b43756dafa5640c1ad7366148d2f3695"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "xor     eax, eax",
+    "cmp     esi, 0x3f",
+    "mov     edi, 0x1",
+    "cmovne  esi, eax",
+    "jmp     sub_e96a0"
+  ]
+}

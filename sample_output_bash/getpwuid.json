@@ -1,0 +1,11 @@
+{
+  "address": "0x311c0",
+  "rules": [
+    "get password database entry on Linux",
+    "get current user on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel getpwuid]"
+  ]
+}

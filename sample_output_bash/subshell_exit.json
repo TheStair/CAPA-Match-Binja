@@ -1,0 +1,30 @@
+{
+  "address": "0x35ef0",
+  "rules": [
+    "terminate process"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     ebx, edi",
+    "sub     rsp, 0x8",
+    "mov     rax, qword [rel stdout]",
+    "mov     rdi, qword [rax]",
+    "call    fflush",
+    "mov     rax, qword [rel stderr]",
+    "mov     rdi, qword [rax]",
+    "call    fflush",
+    "lea     rax, [rel last_command_exit_value]",
+    "mov     dword [rax], ebx",
+    "test    byte [rel data_1611a0], 0x1",
+    "jne     0x35f36",
+    "call    run_exit_trap",
+    "mov     ebx, eax",
+    "jmp     0x35f2f",
+    "mov     edi, ebx",
+    "call    exit",
+    "{ Does not return }"
+  ]
+}

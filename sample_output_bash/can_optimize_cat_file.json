@@ -1,0 +1,35 @@
+{
+  "address": "0xb1950",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "xor     eax, eax",
+    "cmp     dword [rdi], 0x4",
+    "je      0xb1960",
+    "cmp     qword [rdi+0x10], 0x0",
+    "jne     0xb195b",
+    "retn    ",
+    "mov     eax, dword [rdi+0x4]",
+    "and     eax, 0x80",
+    "jne     0xb19a0",
+    "xor     eax, eax",
+    "retn    ",
+    "mov     rdx, qword [rdi+0x18]",
+    "cmp     qword [rdx+0x8], 0x0",
+    "jne     0xb195b",
+    "mov     rdx, qword [rdx+0x10]",
+    "test    rdx, rdx",
+    "je      0xb195b",
+    "cmp     qword [rdx], 0x0",
+    "jne     0xb195b",
+    "cmp     dword [rdx+0x18], 0x1",
+    "jne     0xb195b",
+    "mov     edx, dword [rdx+0x8]",
+    "xor     eax, eax",
+    "test    edx, edx",
+    "sete    al",
+    "retn    "
+  ]
+}

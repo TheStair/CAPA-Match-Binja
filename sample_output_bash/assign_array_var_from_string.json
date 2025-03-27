@@ -1,0 +1,39 @@
+{
+  "address": "0x97e90",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "test    rsi, rsi",
+    "je      0x97edb",
+    "add     rsp, 0x8",
+    "mov     rax, rbx",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    ",
+    "mov     r12d, edx",
+    "call    expand_compound_array_assignment",
+    "mov     edx, r12d",
+    "mov     rdi, rbx",
+    "mov     r13, rax",
+    "mov     rsi, rax",
+    "call    assign_compound_array_list",
+    "test    r13, r13",
+    "je      0x97ecf",
+    "test    rbx, rbx",
+    "je      0x97edb",
+    "mov     rdi, r13",
+    "call    dispose_words",
+    "and     dword [rbx+0x28], 0xffffefff"
+  ]
+}

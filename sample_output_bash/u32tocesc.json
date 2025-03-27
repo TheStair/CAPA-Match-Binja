@@ -1,0 +1,31 @@
+{
+  "address": "0xd9610",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     r8d, edi",
+    "mov     rdi, rsi",
+    "mov     rbp, rsp",
+    "cmp     r8d, 0xffff",
+    "ja      0xd9650",
+    "lea     rcx, [rel data_121fc0]  {\"\\U%08X\"}",
+    "mov     rdx, 0xffffffffffffffff",
+    "mov     esi, 0x2",
+    "xor     eax, eax",
+    "call    __sprintf_chk",
+    "mov     eax, 0xa",
+    "pop     rbp",
+    "retn    ",
+    "lea     rcx, [rel data_121fb9]  {\"\\u%04X\"}",
+    "mov     rdx, 0xffffffffffffffff",
+    "mov     esi, 0x2",
+    "xor     eax, eax",
+    "call    __sprintf_chk",
+    "mov     eax, 0x6",
+    "pop     rbp",
+    "retn    "
+  ]
+}

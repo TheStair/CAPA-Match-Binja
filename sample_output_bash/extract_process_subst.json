@@ -1,0 +1,20 @@
+{
+  "address": "0x6da70",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, ecx",
+    "lea     rcx, [rel no_longjmp_on_fatal_error]",
+    "movsxd  rsi, dword [rdx]",
+    "mov     ecx, dword [rcx]",
+    "test    ecx, ecx",
+    "setne   cl",
+    "add     rsi, rdi",
+    "movzx   ecx, cl",
+    "shl     ecx, 0x6",
+    "or      ecx, eax",
+    "jmp     xparse_dolparen"
+  ]
+}

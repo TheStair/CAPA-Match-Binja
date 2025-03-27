@@ -1,0 +1,29 @@
+{
+  "address": "0x51290",
+  "rules": [
+    "get current PID on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "call    getpid",
+    "movsxd  rdi, eax",
+    "call    itos",
+    "mov     rdi, qword [rbx+0x8]",
+    "mov     r12, rax",
+    "test    rdi, rdi",
+    "je      0x512bc",
+    "or      dword [rbx+0x28], 0x10",
+    "mov     rax, rbx",
+    "mov     qword [rbx+0x8], r12",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "call    free"
+  ]
+}

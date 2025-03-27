@@ -1,0 +1,18 @@
+{
+  "address": "0x107ea0",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
+    "log keystrokes via raw input data/4762f396f48d4e318a08125296476d20"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel _rl_screenwidth]",
+    "mov     edi, dword [rax]",
+    "lea     rax, [rel _rl_term_autowrap]",
+    "cmp     dword [rax], 0x1",
+    "adc     edi, 0x0",
+    "jmp     rl_backward_char"
+  ]
+}

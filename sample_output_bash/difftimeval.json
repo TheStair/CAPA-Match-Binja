@@ -1,0 +1,27 @@
+{
+  "address": "0xd59c0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rcx, qword [rdx]",
+    "sub     rcx, qword [rsi]",
+    "mov     rax, rdi",
+    "mov     qword [rdi], rcx",
+    "mov     rdx, qword [rdx+0x8]",
+    "sub     rdx, qword [rsi+0x8]",
+    "js      0xd59e0",
+    "add     rdx, 0xf4240",
+    "mov     qword [rdi+0x8], rdx",
+    "sub     rcx, 0x1",
+    "js      0xd59f8",
+    "mov     qword [rdi+0x8], rdx",
+    "retn    ",
+    "pxor    xmm0, xmm0",
+    "movups  xmmword [rdi], xmm0",
+    "retn    ",
+    "mov     qword [rdi], rcx",
+    "retn    "
+  ]
+}

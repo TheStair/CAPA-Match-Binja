@@ -1,0 +1,13 @@
+{
+  "address": "0x8a0c0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rsi, [rel top_level_mask]",
+    "xor     edx, edx",
+    "mov     edi, 0x2",
+    "jmp     sigprocmask"
+  ]
+}

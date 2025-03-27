@@ -1,0 +1,30 @@
+{
+  "address": "0xd95b0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     rdi, 0xff",
+    "jbe     0xd95e0",
+    "mov     edx, 0x1",
+    "mov     byte [rsi], dil",
+    "mov     eax, 0x1",
+    "mov     byte [rsi+rdx], 0x0",
+    "retn    ",
+    "cmp     rdi, 0xffff",
+    "ja      0xd95f8",
+    "mov     edx, 0x4",
+    "bswap   edi",
+    "mov     eax, 0x4",
+    "mov     dword [rsi], edi",
+    "mov     byte [rsi+rdx], 0x0",
+    "retn    ",
+    "rol     di, 0x8",
+    "mov     edx, 0x2",
+    "mov     eax, 0x2",
+    "mov     word [rsi], di",
+    "mov     byte [rsi+rdx], 0x0",
+    "retn    "
+  ]
+}

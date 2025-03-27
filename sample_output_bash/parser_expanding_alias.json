@@ -1,0 +1,18 @@
+{
+  "address": "0x34ab0",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel pushed_string_list]",
+    "mov     rdx, qword [rax]",
+    "xor     eax, eax",
+    "test    rdx, rdx",
+    "je      0x34acf",
+    "retn    ",
+    "xor     eax, eax",
+    "cmp     qword [rdx+0x18], 0x0",
+    "setne   al"
+  ]
+}

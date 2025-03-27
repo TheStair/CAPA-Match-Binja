@@ -1,0 +1,37 @@
+{
+  "address": "0xfc260",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rel data_16a508]",
+    "movsxd  rdx, dword [rel data_16a50c]",
+    "cmp     eax, edx",
+    "jle     0xfc2b0",
+    "sub     eax, edx",
+    "add     eax, 0x1ff",
+    "jmp     0xfc27a",
+    "sub     eax, edx",
+    "sub     eax, 0x1",
+    "test    eax, eax",
+    "je      0xfc2a6",
+    "retn    ",
+    "cmp     edi, 0xffffffff",
+    "je      0xfc2c0",
+    "lea     rax, [rel rl_pending_input]",
+    "mov     edi, 0xa",
+    "mov     dword [rax], 0xffffffff",
+    "lea     rax, [rel rl_readline_state]",
+    "or      qword [rax], 0x20000",
+    "jmp     0xfc283",
+    "lea     eax, [rdx+0x1]",
+    "lea     rcx, [rel data_16abe0]",
+    "mov     byte [rcx+rdx], dil",
+    "xor     edx, edx",
+    "cmp     eax, 0x200",
+    "cmovge  eax, edx",
+    "mov     dword [rel data_16a50c], eax",
+    "mov     eax, 0x1"
+  ]
+}

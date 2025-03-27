@@ -1,0 +1,41 @@
+{
+  "address": "0xda980",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "pxor    xmm0, xmm0",
+    "mov     rbp, rsp",
+    "sub     rsp, 0x50",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x8], rax",
+    "xor     eax, eax",
+    "mov     eax, edi",
+    "lea     rdx, [rbp-0x50]",
+    "xor     edi, edi",
+    "mov     qword [rbp-0x20], rax",
+    "mov     eax, esi",
+    "lea     rsi, [rbp-0x30]",
+    "mov     qword [rbp-0x18], rax",
+    "movaps  xmmword [rbp-0x30], xmm0",
+    "call    setitimer",
+    "test    eax, eax",
+    "js      0xda9e0",
+    "mov     eax, 0xffffffff",
+    "jmp     0xda9cd",
+    "mov     eax, dword [rbp-0x40]",
+    "cmp     qword [rbp-0x38], 0x1",
+    "sbb     eax, 0xffffffff",
+    "mov     rdx, qword [rbp-0x8]",
+    "sub     rdx, qword [fs:0x28]",
+    "jne     0xda9e7",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "leave   ",
+    "retn    "
+  ]
+}

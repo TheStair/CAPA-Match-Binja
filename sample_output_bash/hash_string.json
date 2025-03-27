@@ -1,0 +1,37 @@
+{
+  "address": "0x87a50",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "hash data using aphash/a4d24543241b499596ce2646a61c7f5b",
+    "contain loop",
+    "decompress data using aPLib/ff5291873cd74f0a8431aa4f49359663",
+    "encode data using XOR",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "movzx   esi, byte [rdi]",
+    "mov     eax, 0x811c9dc5",
+    "test    sil, sil",
+    "je      0x87aa0",
+    "retn    ",
+    "nop     dword [rax]",
+    "mov     edx, eax",
+    "lea     r8d, [rax+rax*8]",
+    "mov     ecx, eax",
+    "add     rdi, 0x1",
+    "shl     edx, 0x7",
+    "shl     ecx, 0x18",
+    "lea     edx, [rdx+r8*2]",
+    "add     edx, eax",
+    "shl     eax, 0x8",
+    "add     edx, eax",
+    "movsx   eax, sil",
+    "movzx   esi, byte [rdi]",
+    "add     ecx, edx",
+    "xor     eax, ecx",
+    "test    sil, sil",
+    "jne     0x87a68",
+    "retn    "
+  ]
+}

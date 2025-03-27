@@ -1,0 +1,29 @@
+{
+  "address": "0x61640",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
+    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "cmp     qword [rel data_166f18], 0x0",
+    "mov     rbp, rsp",
+    "je      0x6165c",
+    "lea     rax, [rel variable_context]",
+    "sub     dword [rax], 0x1",
+    "call    pop_var_context",
+    "lea     rdi, [rel data_11ffb1]",
+    "call    find_variable",
+    "pop     rbp",
+    "mov     rdi, rax",
+    "jmp     setifs",
+    "mov     eax, dword [rel data_166f14]",
+    "test    eax, eax",
+    "jne     0x61680",
+    "call    sub_5c330",
+    "jmp     0x6165c"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "address": "0x51390",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "lea     rdx, [rel variable_context]",
+    "mov     eax, dword [rel data_162e50]",
+    "or      eax, dword [rdx]",
+    "lea     rdx, [rel debugging_mode]",
+    "or      eax, dword [rdx]",
+    "jne     0x513e1",
+    "add     rsp, 0x8",
+    "mov     rax, rbx",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    ",
+    "lea     r12, [rel bash_argv_initialized]",
+    "mov     dword [rel data_162e50], 0x1",
+    "mov     eax, dword [r12]",
+    "test    eax, eax",
+    "je      0x513f0",
+    "call    list_rest_of_args",
+    "mov     r13, rax",
+    "mov     rdi, rax",
+    "call    push_args",
+    "mov     rdi, r13",
+    "call    dispose_words",
+    "mov     dword [r12], 0x1",
+    "jmp     0x513d7",
+    "mov     dword [rel data_162e50], 0x0"
+  ]
+}

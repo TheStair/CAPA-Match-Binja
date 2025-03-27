@@ -1,0 +1,10 @@
+{
+  "address": "0x31420",
+  "rules": [
+    "read file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel read]"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "address": "0x31b60",
+  "rules": [
+    "delay execution"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel sleep]"
+  ]
+}

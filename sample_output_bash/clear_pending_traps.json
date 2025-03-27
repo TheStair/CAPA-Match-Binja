@@ -1,0 +1,26 @@
+{
+  "address": "0x884d0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "encrypt data using HC-128/26adaa3641374fccbeddc33b759c970e",
+    "allocate or change RW memory/b4e5a298cb404535abd304755b86823e",
+    "hash data using aphash/1c6766435cde44639c26b9e1f0d91a11",
+    "encrypt data using XXTEA/41ded627096c472a8da56bad13f19605/9f5ed5341ae94a0d943f2c8a6a459760"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rdi, [rel pending_traps]",
+    "mov     qword [rdi+0x4], 0x0",
+    "lea     rax, [rdi+0x4]",
+    "add     rdi, 0xc",
+    "mov     qword [rdi+0xf0], 0x0",
+    "and     rdi, 0xfffffffffffffff8",
+    "sub     rax, rdi",
+    "add     eax, 0x100",
+    "shr     eax, 0x3",
+    "mov     ecx, eax",
+    "xor     eax, eax",
+    "rep stosq qword [rdi]",
+    "retn    "
+  ]
+}

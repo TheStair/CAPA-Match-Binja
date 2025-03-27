@@ -1,0 +1,25 @@
+{
+  "address": "0x8b290",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "xor     eax, eax",
+    "cmp     byte [rdi], 0x2d",
+    "jne     0x8b2c5",
+    "retn    ",
+    "movzx   edx, byte [rdi+0x1]",
+    "test    dl, dl",
+    "je      0x8b2c5",
+    "cmp     byte [rdi+0x2], 0x0",
+    "jne     0x8b2c5",
+    "sub     edx, 0x47",
+    "cmp     dl, 0x33",
+    "ja      0x8b2c5",
+    "mov     rax, 0xbfb93fc0019a1",
+    "bt      rax, rdx",
+    "setb    al",
+    "movzx   eax, al"
+  ]
+}

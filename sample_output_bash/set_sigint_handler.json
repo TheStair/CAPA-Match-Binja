@@ -1,0 +1,34 @@
+{
+  "address": "0x8a1f0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rel data_1611a4+4]",
+    "test    al, 0x2",
+    "jne     0x8a228",
+    "mov     eax, 0x1",
+    "retn    ",
+    "test    al, 0x40",
+    "jne     0x8a260",
+    "mov     esi, 0x1",
+    "mov     edi, 0x2",
+    "jmp     set_signal_handler",
+    "test    al, 0x1",
+    "jne     0x8a248",
+    "lea     rsi, [rel trap_handler]",
+    "mov     edi, 0x2",
+    "jmp     set_signal_handler",
+    "lea     rax, [rel interactive]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "je      0x8a230",
+    "lea     rsi, [rel termsig_sighandler]",
+    "mov     edi, 0x2",
+    "jmp     set_signal_handler",
+    "lea     rsi, [rel sigint_sighandler]",
+    "mov     edi, 0x2",
+    "jmp     set_signal_handler"
+  ]
+}

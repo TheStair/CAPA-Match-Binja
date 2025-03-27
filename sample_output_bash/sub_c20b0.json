@@ -1,0 +1,41 @@
+{
+  "address": "0xc20b0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel posixly_correct]",
+    "cmp     edi, 0x2d",
+    "je      0xc2100",
+    "mov     ecx, dword [rax]",
+    "test    ecx, ecx",
+    "jne     0xc20f1",
+    "cmp     edi, 0x2b",
+    "jne     0xc20d4",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    ",
+    "lea     rbx, [rel data_11f1ed]  {\"POSIXLY_CORRECT\"}",
+    "xor     edx, edx",
+    "lea     rsi, [rel data_122244[0xc]]  {\"y\"}",
+    "mov     dword [rax], 0x1",
+    "mov     rdi, rbx",
+    "call    bind_variable",
+    "jmp     0xc20e9",
+    "lea     rbx, [rel data_11f1ed]  {\"POSIXLY_CORRECT\"}",
+    "mov     dword [rax], 0x0",
+    "mov     rdi, rbx",
+    "call    unbind_variable_noref",
+    "mov     edx, dword [rax]",
+    "test    edx, edx",
+    "je      0xc20f1",
+    "mov     rdi, rbx",
+    "call    sv_strict_posix"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "address": "0x31ba0",
+  "rules": [
+    "get file attributes"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel fstat]"
+  ]
+}

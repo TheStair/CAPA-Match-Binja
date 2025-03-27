@@ -1,0 +1,10 @@
+{
+  "address": "0x31a90",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel fwrite]"
+  ]
+}

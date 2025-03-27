@@ -1,0 +1,24 @@
+{
+  "address": "0xd52d0",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rel data_1693bc]",
+    "test    eax, eax",
+    "je      0xd5300",
+    "xor     eax, eax",
+    "lea     rax, [rel data_169380]",
+    "test    edi, edi",
+    "je      0xd5302",
+    "retn    ",
+    "cmp     edi, 0x1",
+    "mov     edx, 0x0",
+    "lea     rax, [rel data_169340]",
+    "cmovne  rax, rdx",
+    "retn    "
+  ]
+}

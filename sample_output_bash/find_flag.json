@@ -1,0 +1,33 @@
+{
+  "address": "0x5c450",
+  "rules": [
+    "encrypt data using XTEA/10ee0a8316f84c4781969a6e3e0ea247/811ca4c4f8d549569ea2aaef177bf1ac",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "encrypt data using TEA/d92840dc497d469aaa95c1543453a00c/e07fefb4fc9348cdbcc471f43936d29f",
+    "contain loop",
+    "encrypt data using XXTEA/41ded627096c472a8da56bad13f19605/19c5b9e7682744d8b574f82a4f55cf68",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "decrypt data using TEA/066cb8df2a774080be2d27329c2aadaf/71ff62d8869d418e88d129a8b5fcc11b"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rsi, [rel shell_flags]",
+    "xor     ecx, ecx",
+    "mov     eax, 0x61",
+    "lea     rdx, [rsi+0x10]",
+    "jmp     0x5c47e",
+    "cmp     eax, edi",
+    "jne     0x5c470",
+    "movsx   eax, byte [rdx]",
+    "add     rdx, 0x10",
+    "add     ecx, 0x1",
+    "test    al, al",
+    "je      0x5c490",
+    "movsxd  rcx, ecx",
+    "shl     rcx, 0x4",
+    "mov     rax, qword [rsi+rcx+0x8]",
+    "retn    ",
+    "xor     eax, eax",
+    "retn    "
+  ]
+}

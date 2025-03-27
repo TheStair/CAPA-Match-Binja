@@ -1,0 +1,28 @@
+{
+  "address": "0x36a60",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     edx, 0x5",
+    "lea     rsi, [rel data_123300]",
+    "xor     edi, edi",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "call    dcgettext",
+    "mov     rdi, rax",
+    "mov     rbx, rax",
+    "call    strlen",
+    "mov     edi, 0x1",
+    "mov     rsi, rbx",
+    "mov     rdx, rax",
+    "call    write",
+    "call    bash_logout",
+    "mov     edi, 0x3",
+    "call    jump_to_top_level",
+    "{ Does not return }"
+  ]
+}

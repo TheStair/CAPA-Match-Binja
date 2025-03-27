@@ -1,0 +1,27 @@
+{
+  "address": "0xe0040",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel _rl_kscxt]",
+    "mov     rdi, qword [rbx]",
+    "test    rdi, rdi",
+    "je      0xe0074",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "nop     dword [rax]",
+    "mov     rax, qword [rdi+0x20]",
+    "mov     qword [rbx], rax",
+    "call    free",
+    "mov     rdi, qword [rbx]",
+    "test    rdi, rdi",
+    "jne     0xe0060"
+  ]
+}

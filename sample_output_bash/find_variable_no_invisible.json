@@ -1,0 +1,37 @@
+{
+  "address": "0x53e90",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel expanding_redir]",
+    "push    rbp",
+    "mov     esi, 0x2",
+    "mov     qword [rel data_1619d8], 0x0",
+    "mov     eax, dword [rax]",
+    "mov     rbp, rsp",
+    "test    eax, eax",
+    "jne     0x53ed2",
+    "call    sub_502c0",
+    "test    rax, rax",
+    "je      0x53ee2",
+    "lea     rax, [rel assigning_in_environment]",
+    "mov     esi, dword [rax]",
+    "lea     rax, [rel executing_builtin]",
+    "or      esi, dword [rax]",
+    "cmp     esi, 0x1",
+    "mov     esi, 0x2",
+    "sbb     esi, 0xffffffff",
+    "pop     rbp",
+    "retn    ",
+    "test    byte [rax+0x29 {Elf64_Header::section_header_offset+1.b}], 0x8",
+    "jne     0x53ee8",
+    "mov     rdi, rax",
+    "pop     rbp",
+    "jmp     find_variable_nameref"
+  ]
+}

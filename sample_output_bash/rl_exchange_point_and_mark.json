@@ -1,0 +1,40 @@
+{
+  "address": "0x1080b0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel rl_mark]",
+    "lea     rdx, [rel rl_end]",
+    "mov     eax, dword [rbx]",
+    "cmp     eax, dword [rdx]",
+    "jle     0x1080f0",
+    "test    eax, eax",
+    "js      0x1080d7",
+    "mov     dword [rbx], 0xffffffff",
+    "call    rl_ding",
+    "mov     dword [rbx], 0x0",
+    "mov     eax, 0x1",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "lea     rdx, [rel rl_point]",
+    "mov     dword [rel data_169190], 0x1",
+    "mov     ecx, dword [rdx]",
+    "mov     dword [rdx], eax",
+    "lea     rax, [rel _rl_keep_mark_active]",
+    "mov     dword [rbx], ecx",
+    "mov     rbx, qword [rbp-0x8]",
+    "add     dword [rax], 0x1",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    "
+  ]
+}

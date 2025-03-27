@@ -1,0 +1,24 @@
+{
+  "address": "0x34ed0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel stream_list]",
+    "mov     rax, qword [rax]",
+    "test    rax, rax",
+    "jne     0x34ef0",
+    "cmp     dword [rax+0x8], edi",
+    "jne     0x34ee8",
+    "jmp     0x34f01",
+    "mov     rax, qword [rax]",
+    "test    rax, rax",
+    "je      0x34f00",
+    "mov     eax, 0x1",
+    "retn    ",
+    "xor     eax, eax",
+    "retn    ",
+    "retn    "
+  ]
+}

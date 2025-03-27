@@ -1,0 +1,10 @@
+{
+  "address": "0x317a0",
+  "rules": [
+    "change file permission on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel chown]"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "address": "0x34400",
+  "rules": [
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
+    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     byte [rel __bss_start], 0x0",
+    "jne     0x34438",
+    "retn    ",
+    "push    rbp",
+    "cmp     qword [rel __cxa_finalize], 0x0",
+    "mov     rbp, rsp",
+    "je      0x34427",
+    "call    deregister_tm_clones",
+    "mov     byte [rel __bss_start], 0x1",
+    "pop     rbp",
+    "retn    ",
+    "mov     rdi, qword [rel data_158008]",
+    "call    __cxa_finalize"
+  ]
+}

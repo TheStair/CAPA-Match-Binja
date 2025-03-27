@@ -1,0 +1,26 @@
+{
+  "address": "0x54be0",
+  "rules": [
+    "encrypt data using Curve25519/f2994133291147a090851ed21e9c381b"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel global_variables]",
+    "mov     rax, qword [rax]",
+    "mov     rsi, qword [rax+0x20]",
+    "call    sub_54b40",
+    "mov     edi, 0x400",
+    "mov     rbx, rax",
+    "call    hash_create",
+    "or      dword [rbx+0x28], 0x40",
+    "mov     qword [rbx+0x8], rax",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

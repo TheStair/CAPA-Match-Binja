@@ -1,0 +1,23 @@
+{
+  "address": "0xd9990",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     0xd99b2",
+    "movzx   edx, byte [rdi]",
+    "test    dl, dl",
+    "jne     0xd99a0",
+    "and     edx, 0xc0",
+    "cmp     edx, 0x80",
+    "je      0xd99c0",
+    "xor     eax, eax",
+    "retn    ",
+    "mov     rax, rdi",
+    "retn    ",
+    "add     rdi, 0x1"
+  ]
+}

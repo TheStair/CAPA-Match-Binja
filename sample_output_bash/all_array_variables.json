@@ -1,0 +1,40 @@
+{
+  "address": "0x5b1c0",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rdi, [rel sub_5ab60]",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel shell_variables]",
+    "mov     rsi, qword [rax]",
+    "call    map_over",
+    "mov     rbx, rax",
+    "test    rax, rax",
+    "je      0x5b223",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "cmp     qword [rax {Elf64_Header::ident.signature[0].q}], 0x0",
+    "je      0x5b230",
+    "xor     esi, esi",
+    "jmp     0x5b20f",
+    "mov     edx, 0x1",
+    "nop     word [rax+rax]",
+    "lea     rcx, [rel sub_5acd0]",
+    "mov     edx, 0x8",
+    "mov     rdi, rbx",
+    "call    qsort",
+    "mov     rsi, rdx",
+    "add     rdx, 0x1",
+    "cmp     qword [rbx+rdx*8-0x8], 0x0",
+    "jne     0x5b200"
+  ]
+}

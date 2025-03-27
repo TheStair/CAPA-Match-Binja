@@ -1,0 +1,39 @@
+{
+  "address": "0xaa860",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     dword [rel data_168d78], 0x0",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12, qword [rel data_168d78]",
+    "push    rbx",
+    "mov     ebx, edi",
+    "mov     edi, 0x30",
+    "call    malloc",
+    "test    rax, rax",
+    "je      0xaa8c5",
+    "mov     esi, 0x30",
+    "lea     rdi, [rel data_11f01e]  {\"xmalloc\"}",
+    "call    sub_a7f00",
+    "{ Does not return }",
+    "mov     rdx, qword [rel data_136538]",
+    "mov     dword [rax+0x8], ebx",
+    "mov     qword [rax+0x20], r12",
+    "mov     qword [rax+0x10], rdx",
+    "lea     rdx, [rel redirection_undo_list]",
+    "mov     qword [rax+0x28], 0x0",
+    "mov     rcx, qword [rdx]",
+    "mov     dword [rax+0x18], 0x9",
+    "mov     qword [rdx], rax",
+    "mov     qword [rax], rcx",
+    "xor     eax, eax",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ]
+}

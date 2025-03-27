@@ -1,0 +1,36 @@
+{
+  "address": "0x41f90",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "create or open file"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "xor     eax, eax",
+    "mov     esi, 0x802",
+    "lea     rdi, [rel data_11faa8]  {\"/dev/tty\"}",
+    "mov     rbp, rsp",
+    "call    open",
+    "test    eax, eax",
+    "js      0x41fc0",
+    "mov     rax, qword [rel stdin]",
+    "mov     rdi, qword [rax]",
+    "call    fileno",
+    "mov     edi, eax",
+    "call    ttyname",
+    "mov     rdi, rax",
+    "test    rax, rax",
+    "je      0x41fee",
+    "mov     edi, eax",
+    "pop     rbp",
+    "jmp     close",
+    "pop     rbp",
+    "retn    ",
+    "xor     eax, eax",
+    "mov     esi, 0x802",
+    "call    open",
+    "test    eax, eax",
+    "jns     0x41faf"
+  ]
+}

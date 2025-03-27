@@ -1,0 +1,24 @@
+{
+  "address": "0x9d210",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel history_length]",
+    "lea     rsi, [rel enable_history_list]",
+    "mov     edx, 0x1",
+    "mov     ecx, dword [rax]",
+    "lea     rax, [rel history_offset]",
+    "mov     dword [rax], ecx",
+    "lea     rax, [rel remember_on_history]",
+    "mov     eax, dword [rax]",
+    "or      eax, dword [rsi]",
+    "je      0x9d24a",
+    "mov     eax, edx",
+    "retn    ",
+    "lea     rax, [rel history_base]",
+    "mov     edx, dword [rax]",
+    "add     edx, ecx"
+  ]
+}

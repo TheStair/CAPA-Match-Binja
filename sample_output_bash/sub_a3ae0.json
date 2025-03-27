@@ -1,0 +1,34 @@
+{
+  "address": "0xa3ae0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "log keystrokes via raw input data/4762f396f48d4e318a08125296476d20",
+    "contain loop",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rdx, [rel rl_last_func]",
+    "lea     rax, [rel sub_a3ae0]",
+    "cmp     qword [rdx], rax",
+    "je      0xa3b20",
+    "mov     edx, dword [rel data_1689a8]",
+    "mov     edi, 0x3f",
+    "test    edx, edx",
+    "jne     0xa3af7",
+    "lea     rax, [rel _rl_complete_show_all]",
+    "mov     edi, 0x21",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "jne     0xa3b1b",
+    "jmp     sub_a39c0",
+    "jmp     sub_a39c0",
+    "lea     rax, [rel _rl_complete_show_unmodified]",
+    "cmp     dword [rax], 0x1",
+    "sbb     edi, edi",
+    "and     edi, 0xffffffc9",
+    "add     edi, 0x40"
+  ]
+}

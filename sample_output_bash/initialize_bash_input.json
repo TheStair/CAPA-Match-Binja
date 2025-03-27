@@ -1,0 +1,25 @@
+{
+  "address": "0x34ad0",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel bash_input]",
+    "mov     rdi, qword [rbx+0x8]",
+    "mov     dword [rbx], 0x0",
+    "test    rdi, rdi",
+    "je      0x34af8",
+    "pxor    xmm0, xmm0",
+    "movups  xmmword [rbx+0x8], xmm0",
+    "movups  xmmword [rbx+0x18], xmm0",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "call    free"
+  ]
+}

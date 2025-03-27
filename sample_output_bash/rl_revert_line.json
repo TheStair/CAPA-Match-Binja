@@ -1,0 +1,38 @@
+{
+  "address": "0x101f30",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel rl_undo_list]",
+    "cmp     qword [rbx], 0x0",
+    "je      0x101f90",
+    "call    rl_ding",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    ",
+    "nop     word [rax+rax]",
+    "call    rl_do_undo",
+    "cmp     qword [rbx], 0x0",
+    "jne     0x101f50",
+    "lea     rax, [rel rl_editing_mode]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "jne     0x101f82",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    ",
+    "lea     rax, [rel rl_mark]",
+    "mov     dword [rax], 0x0",
+    "lea     rax, [rel rl_point]",
+    "mov     dword [rax], 0x0"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "address": "0xf9c50",
+  "rules": [
+    "write file on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rax, [rel _rl_out_stream]",
+    "mov     edi, 0xa",
+    "mov     rsi, qword [rax]",
+    "mov     rbp, rsp",
+    "call    putc",
+    "xor     eax, eax",
+    "pop     rbp",
+    "retn    "
+  ]
+}

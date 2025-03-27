@@ -1,0 +1,40 @@
+{
+  "address": "0x44100",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel executing]",
+    "mov     esi, dword [rax]",
+    "test    esi, esi",
+    "je      0x44160",
+    "lea     rax, [rel line_number]",
+    "mov     eax, dword [rax]",
+    "retn    ",
+    "mov     ecx, dword [rel data_161a2c]",
+    "test    ecx, ecx",
+    "jne     0x44160",
+    "lea     rax, [rel variable_context]",
+    "mov     edx, dword [rax]",
+    "test    edx, edx",
+    "je      0x44135",
+    "mov     rax, qword [rel data_161a20]",
+    "test    rax, rax",
+    "je      0x44160",
+    "lea     rax, [rel interactive_shell]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "jne     0x44160",
+    "mov     edx, dword [rax]",
+    "cmp     edx, 0xb",
+    "je      0x44152",
+    "mov     rax, qword [rax+0x18]",
+    "mov     eax, dword [rax+0x4]",
+    "retn    ",
+    "cmp     edx, 0xa",
+    "je      0x44152",
+    "cmp     edx, 0xc",
+    "jne     0x44160"
+  ]
+}

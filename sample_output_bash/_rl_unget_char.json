@@ -1,0 +1,34 @@
+{
+  "address": "0xfc150",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     edx, dword [rel data_16a508]",
+    "mov     ecx, dword [rel data_16a50c]",
+    "mov     eax, edx",
+    "sub     eax, ecx",
+    "cmp     edx, ecx",
+    "jle     0xfc170",
+    "add     eax, 0x1ff",
+    "test    eax, eax",
+    "je      0xfc16f",
+    "sub     eax, 0x1",
+    "test    eax, eax",
+    "jne     0xfc179",
+    "retn    ",
+    "sub     edx, 0x1",
+    "mov     eax, edx",
+    "jns     0xfc18a",
+    "mov     dword [rel data_16a508], eax",
+    "movsxd  rdx, edx",
+    "lea     rax, [rel data_16abe0]",
+    "mov     byte [rax+rdx], dil",
+    "mov     eax, 0x1",
+    "retn    ",
+    "mov     eax, 0x1ff",
+    "mov     edx, 0x1ff"
+  ]
+}

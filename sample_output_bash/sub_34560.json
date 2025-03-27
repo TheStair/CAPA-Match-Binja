@@ -1,0 +1,37 @@
+{
+  "address": "0x34560",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "lea     rax, [rel history_length]",
+    "lea     rsi, [rel enable_history_list]",
+    "mov     ecx, dword [rax]",
+    "lea     rax, [rel history_offset]",
+    "mov     dword [rax], ecx",
+    "lea     rax, [rel remember_on_history]",
+    "mov     edx, dword [rax]",
+    "or      edx, dword [rsi]",
+    "mov     eax, 0x1",
+    "je      0x345b6",
+    "retn    ",
+    "lea     rax, [rel history_base]",
+    "add     ecx, dword [rax]",
+    "mov     eax, ecx",
+    "cmp     ecx, 0x1",
+    "je      0x345b6",
+    "lea     rdx, [rel ps1_prompt]",
+    "cmp     qword [rdx], rdi",
+    "je      0x345b6",
+    "lea     rdx, [rel ps2_prompt]",
+    "cmp     qword [rdx], rdi",
+    "je      0x345c0",
+    "lea     rdx, [rel command_oriented_history]",
+    "mov     edx, dword [rdx]",
+    "test    edx, edx",
+    "je      0x345b6",
+    "sub     eax, 0x1",
+    "sub     eax, 0x1",
+    "retn    "
+  ]
+}

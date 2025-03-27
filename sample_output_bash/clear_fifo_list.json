@@ -1,0 +1,37 @@
+{
+  "address": "0x744d0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     ecx, dword [rel data_161064]",
+    "test    ecx, ecx",
+    "je      0x74540",
+    "retn    ",
+    "mov     rcx, qword [rel data_1685a8]",
+    "xor     eax, eax",
+    "jmp     0x744fe",
+    "cmp     dword [rel data_1685a4], eax",
+    "jle     0x7452b",
+    "mov     dword [rel data_161064], 0x0",
+    "retn    ",
+    "mov     edx, dword [rcx+rax*4]",
+    "test    edx, edx",
+    "je      0x744f0",
+    "mov     edx, dword [rel data_161064]",
+    "add     rax, 0x1",
+    "test    edx, edx",
+    "je      0x7452b",
+    "mov     dword [rcx+rax*4], 0x0",
+    "mov     esi, dword [rel data_161064]",
+    "add     rax, 0x1",
+    "lea     edx, [rsi-0x1]",
+    "mov     dword [rel data_161064], edx",
+    "test    edx, edx",
+    "jne     0x744fe"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "address": "0x314c0",
+  "rules": [
+    "get password database entry on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel getpwnam]"
+  ]
+}

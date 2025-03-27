@@ -1,0 +1,15 @@
+{
+  "address": "0x44540",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "pcmpeqd xmm0, xmm0",
+    "mov     qword [rdi], 0x0",
+    "movups  xmmword [rdi+0x8], xmm0",
+    "movdqa  xmm0, xmmword [rel data_136760]",
+    "movups  xmmword [rdi+0x18], xmm0",
+    "retn    "
+  ]
+}

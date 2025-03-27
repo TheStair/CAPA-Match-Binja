@@ -1,0 +1,31 @@
+{
+  "address": "0xda2f0",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     edx, 0x1",
+    "mov     esi, 0x4",
+    "mov     rbp, rsp",
+    "sub     rsp, 0x10",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x8], rax",
+    "xor     eax, eax",
+    "lea     rdi, [rbp-0xc]",
+    "call    getrandom",
+    "cmp     rax, 0x4",
+    "je      0xda340",
+    "mov     eax, dword [rbp-0xc]",
+    "jmp     0xda329",
+    "call    arc4random",
+    "mov     rdx, qword [rbp-0x8]",
+    "sub     rdx, qword [fs:0x28]",
+    "jne     0xda345",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "leave   ",
+    "retn    "
+  ]
+}

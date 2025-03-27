@@ -1,0 +1,35 @@
+{
+  "address": "0x10c620",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     r13, [rel history_length]",
+    "lea     rbx, [rel history_offset]",
+    "mov     eax, dword [r13]",
+    "mov     r12d, dword [rbx]",
+    "mov     dword [rbx], eax",
+    "call    _rl_revert_previous_lines",
+    "cmp     dword [r13], r12d",
+    "jl      0x10c665",
+    "add     rsp, 0x8",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    ",
+    "test    r12d, r12d",
+    "js      0x10c665",
+    "cmp     qword [rel data_1688b8], 0x0",
+    "je      0x10c665",
+    "mov     dword [rbx], r12d"
+  ]
+}

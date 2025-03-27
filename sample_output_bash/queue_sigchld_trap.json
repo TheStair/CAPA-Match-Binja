@@ -1,0 +1,17 @@
+{
+  "address": "0x88740",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    edi, edi",
+    "jle     0x88769",
+    "retn    ",
+    "lea     rax, [rel pending_traps]",
+    "mov     dword [rel data_168788], 0x1",
+    "add     dword [rax+0x44], edi",
+    "lea     rax, [rel trapped_signal_received]",
+    "mov     dword [rax], 0x11"
+  ]
+}

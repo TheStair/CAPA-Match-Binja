@@ -1,0 +1,43 @@
+{
+  "address": "0x111070",
+  "rules": [
+    "write file on Linux",
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp {__saved_rbp}",
+    "mov     rbp, rsp {__saved_rbp}",
+    "push    r12 {__saved_r12}",
+    "lea     r12, [rel rl_outstream]",
+    "push    rbx {__saved_rbx}",
+    "lea     rbx, [rel _rl_color_indicator]",
+    "mov     rcx, qword [r12]  {rl_outstream}",
+    "mov     rdi, qword [rbx+0x28]  {data_160368}",
+    "test    rdi, rdi",
+    "je      0x1110b0",
+    "mov     rsi, qword [rbx]  {_rl_color_indicator}",
+    "mov     rdi, qword [rbx+0x8]  {data_160348}",
+    "mov     edx, 0x1",
+    "call    fwrite",
+    "mov     rcx, qword [r12]  {rl_outstream}",
+    "mov     rsi, qword [rbx+0x30]  {data_160370}",
+    "mov     edx, 0x1",
+    "mov     rdi, qword [rbx+0x38]  {data_160378}",
+    "call    fwrite",
+    "mov     rcx, qword [r12]  {rl_outstream}",
+    "mov     rsi, qword [rbx+0x10]  {data_160350}",
+    "mov     edx, 0x1",
+    "mov     rdi, qword [rbx+0x18]  {data_160358}",
+    "pop     rbx {__saved_rbx}",
+    "pop     r12 {__saved_r12}",
+    "pop     rbp {__saved_rbp}",
+    "jmp     fwrite",
+    "mov     rsi, qword [rbx+0x20]  {data_160360}",
+    "mov     edx, 0x1",
+    "pop     rbx {__saved_rbx}",
+    "pop     r12 {__saved_r12}",
+    "pop     rbp {__saved_rbp}",
+    "jmp     fwrite"
+  ]
+}

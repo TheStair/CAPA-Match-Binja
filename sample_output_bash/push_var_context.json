@@ -1,0 +1,35 @@
+{
+  "address": "0x5b850",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12, rdx",
+    "push    rbx",
+    "call    new_var_context",
+    "mov     rbx, rax",
+    "test    r12, r12",
+    "je      0x5b884",
+    "lea     rax, [rel shell_variables]",
+    "mov     rdx, qword [rax]",
+    "mov     qword [rax], rbx",
+    "mov     rax, rbx",
+    "mov     qword [rbx+0x18], rdx",
+    "mov     qword [rdx+0x10], rbx",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "mov     qword [rax+0x20], r12",
+    "xor     edx, edx",
+    "lea     rsi, [rel sub_5ab80]",
+    "mov     rdi, r12",
+    "call    sub_111c60",
+    "or      dword [rbx+0xc], 0x2"
+  ]
+}

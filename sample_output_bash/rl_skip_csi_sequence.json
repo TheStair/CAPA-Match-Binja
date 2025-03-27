@@ -1,0 +1,26 @@
+{
+  "address": "0x1082d0",
+  "rules": [
+    "encrypt data using Curve25519/f2994133291147a090851ed21e9c381b",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel rl_readline_state]",
+    "or      qword [rbx], 0x40",
+    "nop     dword [rax+rax]",
+    "call    rl_read_key",
+    "lea     edx, [rax-0x20]",
+    "cmp     edx, 0x1f",
+    "jbe     0x1082f0",
+    "and     qword [rbx], 0xffffffffffffffbf",
+    "shr     eax, 0x1f",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

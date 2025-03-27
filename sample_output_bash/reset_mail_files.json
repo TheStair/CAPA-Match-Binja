@@ -1,0 +1,25 @@
+{
+  "address": "0x882c0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "movsxd  rdx, dword [rel data_16878c]",
+    "test    edx, edx",
+    "jle     0x882ff",
+    "retn    ",
+    "mov     rax, qword [rel data_168790]",
+    "pxor    xmm0, xmm0",
+    "lea     rcx, [rax+rdx*8]",
+    "nop     ",
+    "mov     rdx, qword [rax]",
+    "add     rax, 0x8",
+    "mov     qword [rdx+0x20], 0x0",
+    "mov     dword [rdx+0x28], 0x0",
+    "movups  xmmword [rdx+0x10], xmm0",
+    "cmp     rax, rcx",
+    "jne     0x882e0"
+  ]
+}

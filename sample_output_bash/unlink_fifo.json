@@ -1,0 +1,28 @@
+{
+  "address": "0x74600",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "movsxd  rbx, edi",
+    "sub     rsp, 0x8",
+    "mov     rax, qword [rel data_1685a8]",
+    "mov     eax, dword [rax+rbx*4]",
+    "test    eax, eax",
+    "jne     0x74628",
+    "call    close",
+    "mov     rax, qword [rel data_1685a8]",
+    "mov     dword [rax+rbx*4], 0x0",
+    "mov     rbx, qword [rbp-0x8]",
+    "sub     dword [rel data_161064], 0x1",
+    "leave   ",
+    "retn    ",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "address": "0x319e0",
+  "rules": [
+    "link function at runtime on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel dlsym]"
+  ]
+}

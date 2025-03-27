@@ -1,0 +1,35 @@
+{
+  "address": "0x3ba50",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "lea     rdx, [rel need_here_doc]",
+    "movsxd  rax, dword [rdx]",
+    "cmp     eax, 0xf",
+    "jg      0x3ba70",
+    "push    rbp",
+    "xor     ecx, ecx",
+    "lea     rsi, [rel data_123600]  {\"maximum here-document count exce\u2026\"}",
+    "xor     edi, edi",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "push    rax",
+    "lea     rbx, [rel last_command_exit_value]",
+    "mov     dword [rdx], ecx",
+    "mov     edx, 0x5",
+    "mov     dword [rbx], 0x2",
+    "call    dcgettext",
+    "mov     rdi, rax",
+    "call    sub_3b600",
+    "call    reset_parser",
+    "mov     edi, dword [rbx]",
+    "call    exit_shell",
+    "{ Does not return }",
+    "lea     ecx, [rax+0x1]",
+    "mov     dword [rdx], ecx",
+    "lea     rdx, [rel data_161640]",
+    "mov     qword [rdx+rax*8], rdi",
+    "retn    "
+  ]
+}

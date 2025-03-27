@@ -1,0 +1,21 @@
+{
+  "address": "0x35e30",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel current_prompt_string]",
+    "mov     rdx, qword [rax]",
+    "mov     eax, 0x1",
+    "test    rdx, rdx",
+    "je      0x35e5b",
+    "retn    ",
+    "lea     rax, [rel ps2_prompt]",
+    "cmp     rdx, qword [rax]",
+    "sete    al",
+    "movzx   eax, al",
+    "add     eax, 0x1"
+  ]
+}

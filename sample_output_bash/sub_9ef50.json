@@ -1,0 +1,40 @@
+{
+  "address": "0x9ef50",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rdi, [rel data_12041a]  {\"HOSTFILE\"}",
+    "mov     rbp, rsp",
+    "call    find_variable",
+    "test    rax, rax",
+    "je      0x9ef98",
+    "lea     rdi, [rel data_120bfa]  {\"hostname_completion_file\"}",
+    "call    find_variable",
+    "test    rax, rax",
+    "je      0x9efc0",
+    "mov     rdi, rax",
+    "call    get_variable_value",
+    "mov     rdi, rax",
+    "test    rax, rax",
+    "je      0x9ef98",
+    "lea     rdi, [rel data_120bef]  {\"/etc/hosts\"}",
+    "jmp     0x9ef79",
+    "mov     rdi, rax",
+    "call    get_variable_value",
+    "mov     rdi, rax",
+    "test    rax, rax",
+    "jne     0x9ef79",
+    "call    sub_9eb60",
+    "cmp     qword [rel data_166f00], 0x0",
+    "je      0x9ef92",
+    "nop     dword [rax]",
+    "pop     rbp",
+    "retn    ",
+    "lea     rax, [rel hostname_list_initialized]",
+    "add     dword [rax], 0x1"
+  ]
+}

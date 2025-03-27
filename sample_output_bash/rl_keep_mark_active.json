@@ -1,0 +1,13 @@
+{
+  "address": "0x105290",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel _rl_keep_mark_active]",
+    "add     dword [rax], 0x1",
+    "retn    "
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "address": "0x92270",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "mov     r13, rdi",
+    "push    r12",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "test    rsi, rsi",
+    "je      0x922ae",
+    "add     rsp, 0x8",
+    "mov     rax, r13",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    ",
+    "mov     rbx, rsi",
+    "xor     r12d, r12d",
+    "nop     ",
+    "mov     rax, qword [rbx+0x8]",
+    "mov     rsi, r12",
+    "mov     rdi, r13",
+    "add     r12, 0x1",
+    "mov     rdx, qword [rax]",
+    "call    array_insert",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "jne     0x92290"
+  ]
+}

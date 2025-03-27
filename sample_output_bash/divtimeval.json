@@ -1,0 +1,24 @@
+{
+  "address": "0xd5aa0",
+  "rules": [
+    "encrypt data using XXTEA/8b51ac557ada4334b6544ffbf490740a/6611357b470d4f51a55c8b60d2040800",
+    "decrypt data using TEA/b2f1d7a7bfa04984a8dca63866a95e23/65029a7be1a74342926ce5af1066d3d1",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "encrypt data using TEA/6daa315fd3424f3e9ddc04a16106b42a/a391c789b13342be8944ab433e4f9dba"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rax, qword [rdi]",
+    "movsxd  rsi, esi",
+    "cqo     ",
+    "idiv    rsi",
+    "mov     qword [rdi], rax",
+    "imul    rax, rdx, 0xf4240",
+    "add     rax, qword [rdi+0x8]",
+    "cqo     ",
+    "idiv    rsi",
+    "mov     qword [rdi+0x8], rax",
+    "mov     rax, rdi",
+    "retn    "
+  ]
+}

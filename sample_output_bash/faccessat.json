@@ -1,0 +1,10 @@
+{
+  "address": "0x310c0",
+  "rules": [
+    "check file permission on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel faccessat]"
+  ]
+}

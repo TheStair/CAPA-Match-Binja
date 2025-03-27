@@ -1,0 +1,11 @@
+{
+  "address": "0x31a70",
+  "rules": [
+    "terminate process"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel exit]",
+    "{ Does not return }"
+  ]
+}

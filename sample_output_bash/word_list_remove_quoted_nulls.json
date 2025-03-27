@@ -1,0 +1,29 @@
+{
+  "address": "0x73a80",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x73ac0",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "nop     dword [rax]",
+    "mov     rax, qword [rbx+0x8]",
+    "mov     rdi, qword [rax]",
+    "call    remove_quoted_nulls",
+    "mov     rax, qword [rbx+0x8]",
+    "mov     rbx, qword [rbx]",
+    "and     dword [rax+0x8], 0xfffbffff",
+    "test    rbx, rbx",
+    "jne     0x73a98",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ]
+}

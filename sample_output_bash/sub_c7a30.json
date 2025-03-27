@@ -1,0 +1,41 @@
+{
+  "address": "0xc7a30",
+  "rules": [
+    "get file attributes"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "mov     rbp, rsp",
+    "sub     rsp, 0xa0",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x8], rax",
+    "xor     eax, eax",
+    "and     esi, 0x10",
+    "lea     rsi, [rbp-0xa0]",
+    "je      0xc7a90",
+    "call    stat",
+    "jmp     0xc7a5b",
+    "call    lstat",
+    "test    eax, eax",
+    "js      0xc7a97",
+    "mov     eax, 0xffffffff",
+    "jmp     0xc7a7e",
+    "mov     eax, dword [rbp-0x88]",
+    "and     eax, 0xf000",
+    "cmp     eax, 0xa000",
+    "je      0xc7a9e",
+    "mov     rdx, qword [rbp-0x8]",
+    "sub     rdx, qword [fs:0x28]",
+    "jne     0xc7aa5",
+    "mov     eax, 0xfffffffe",
+    "jmp     0xc7a7e",
+    "cmp     eax, 0x4000",
+    "setne   al",
+    "movzx   eax, al",
+    "neg     eax",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "leave   ",
+    "retn    "
+  ]
+}

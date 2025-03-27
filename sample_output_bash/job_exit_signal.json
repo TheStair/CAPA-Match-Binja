@@ -1,0 +1,26 @@
+{
+  "address": "0x667f0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "encrypt data using Curve25519/71854cb5ec3d414da844548a1a695b22",
+    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
+    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    sub_66750",
+    "pop     rbp",
+    "mov     edx, eax",
+    "and     eax, 0x7f",
+    "and     edx, 0x7f",
+    "add     edx, 0x1",
+    "cmp     dl, 0x1",
+    "mov     edx, 0x0",
+    "cmovle  eax, edx",
+    "retn    "
+  ]
+}

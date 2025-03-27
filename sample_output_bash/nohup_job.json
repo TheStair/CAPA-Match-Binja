@@ -1,0 +1,21 @@
+{
+  "address": "0x66270",
+  "rules": [
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel js]",
+    "mov     eax, dword [rax+0x1c]",
+    "test    eax, eax",
+    "je      0x6629c",
+    "retn    ",
+    "lea     rax, [rel jobs]",
+    "movsxd  rdi, edi",
+    "mov     rax, qword [rax]",
+    "mov     rax, qword [rax+rdi*8]",
+    "test    rax, rax",
+    "je      0x6629c",
+    "or      dword [rax+0x18], 0x8"
+  ]
+}

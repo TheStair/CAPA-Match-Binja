@@ -1,0 +1,25 @@
+{
+  "address": "0xd50b0",
+  "rules": [
+    "get system information on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rel data_159794]",
+    "test    eax, eax",
+    "jle     0xd50c0",
+    "push    rbp",
+    "mov     edi, 0x3",
+    "mov     rbp, rsp",
+    "call    sysconf",
+    "mov     edx, 0x40",
+    "pop     rbp",
+    "test    eax, eax",
+    "mov     ecx, edx",
+    "cmovg   ecx, eax",
+    "mov     eax, ecx",
+    "mov     dword [rel data_159794], ecx",
+    "retn    ",
+    "retn    "
+  ]
+}

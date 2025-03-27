@@ -1,0 +1,27 @@
+{
+  "address": "0xa7910",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel variable_context]",
+    "mov     edx, dword [rel data_166ee8]",
+    "mov     eax, dword [rax]",
+    "test    eax, eax",
+    "mov     eax, edx",
+    "je      0xa7938",
+    "lea     rcx, [rel this_shell_builtin]",
+    "lea     rsi, [rel set_builtin]",
+    "or      eax, 0x1",
+    "cmp     qword [rcx], rsi",
+    "jne     0xa792c",
+    "or      eax, 0x2",
+    "mov     dword [rel data_166ee8], eax",
+    "retn    ",
+    "mov     eax, edx",
+    "or      eax, 0x4",
+    "mov     dword [rel data_166ee8], eax",
+    "retn    "
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "address": "0x9dbb0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x9dbd8",
+    "mov     rax, rsi",
+    "retn    ",
+    "mov     rdx, rdi",
+    "nop     dword [rax]",
+    "mov     rcx, rdx",
+    "mov     rdx, qword [rdx]",
+    "test    rdx, rdx",
+    "jne     0x9dbc0",
+    "mov     qword [rcx], rsi",
+    "mov     rax, rdi",
+    "retn    "
+  ]
+}

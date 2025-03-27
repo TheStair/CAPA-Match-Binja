@@ -1,0 +1,14 @@
+{
+  "address": "0x10c060",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel history_offset]",
+    "mov     edi, dword [rax]",
+    "add     edi, 0x1",
+    "jmp     rl_get_previous_history"
+  ]
+}

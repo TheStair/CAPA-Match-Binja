@@ -1,0 +1,43 @@
+{
+  "address": "0x5dcc0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "xor     edx, edx",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel shell_functions]",
+    "mov     rsi, qword [rax]",
+    "call    hash_remove",
+    "test    rax, rax",
+    "je      0x5dd2c",
+    "mov     eax, 0xffffffff",
+    "jmp     0x5dd17",
+    "mov     rbx, rax",
+    "lea     rax, [rel it_functions]",
+    "mov     rdi, qword [rbx+0x10]",
+    "or      dword [rax], 0x2",
+    "test    rdi, rdi",
+    "je      0x5dd04",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "mov     rdi, qword [rbx+0x8]",
+    "call    free",
+    "mov     rdi, rbx",
+    "call    free",
+    "xor     eax, eax",
+    "test    byte [rdi+0x28], 0x1",
+    "jne     0x5dd20",
+    "lea     rax, [rel array_needs_making]",
+    "add     dword [rax], 0x1",
+    "jmp     0x5dcff",
+    "call    dispose_variable"
+  ]
+}

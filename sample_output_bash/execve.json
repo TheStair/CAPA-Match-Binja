@@ -1,0 +1,10 @@
+{
+  "address": "0x31470",
+  "rules": [
+    "create process on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel execve]"
+  ]
+}

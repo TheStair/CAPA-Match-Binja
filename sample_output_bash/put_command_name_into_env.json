@@ -1,0 +1,13 @@
+{
+  "address": "0x5dca0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rdx, rdi",
+    "mov     esi, 0x2",
+    "lea     rdi, [rel data_11fee7]",
+    "jmp     update_export_env_inplace"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "address": "0x34cf0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel bash_input]",
+    "cmp     dword [rax], 0x1",
+    "je      0x34d50",
+    "retn    ",
+    "lea     rax, [rel stream_list]",
+    "jmp     0x34d16",
+    "mov     rax, qword [rax]",
+    "test    rax, rax",
+    "jne     0x34d10",
+    "cmp     dword [rax+0x8], 0x1",
+    "je      0x34d50",
+    "lea     rax, [rel current_readline_line]",
+    "lea     rcx, [rel data_11f036]  {\"readline stdin\"}",
+    "mov     edx, 0x1",
+    "lea     rsi, [rel sub_344a0]",
+    "lea     rdi, [rel sub_36ab0]",
+    "mov     r8, qword [rax]",
+    "jmp     init_yy_io"
+  ]
+}

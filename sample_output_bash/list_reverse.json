@@ -1,0 +1,21 @@
+{
+  "address": "0x9db50",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rax, rdi",
+    "test    rdi, rdi",
+    "je      0x9db71",
+    "retn    ",
+    "xor     ecx, ecx",
+    "jmp     0x9db63",
+    "mov     rdx, qword [rax]",
+    "mov     qword [rax], rcx",
+    "mov     rcx, rax",
+    "test    rdx, rdx",
+    "jne     0x9db60",
+    "mov     rax, rdx"
+  ]
+}

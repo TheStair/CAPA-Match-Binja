@@ -1,0 +1,10 @@
+{
+  "address": "0x31230",
+  "rules": [
+    "set current directory"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel chdir]"
+  ]
+}

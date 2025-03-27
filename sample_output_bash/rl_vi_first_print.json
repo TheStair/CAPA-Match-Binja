@@ -1,0 +1,31 @@
+{
+  "address": "0xdf7f0",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel rl_end]",
+    "lea     rsi, [rel rl_point]",
+    "movsxd  rcx, dword [rax]",
+    "mov     dword [rsi], 0x0",
+    "test    ecx, ecx",
+    "jle     0xdf83d",
+    "xor     eax, eax",
+    "retn    ",
+    "lea     rax, [rel rl_line_buffer]",
+    "mov     rdi, qword [rax]",
+    "mov     eax, 0x1",
+    "jmp     0xdf82e",
+    "movzx   edx, byte [rdi+rax-0x1]",
+    "cmp     dl, 0x20",
+    "je      0xdf820",
+    "mov     dword [rsi], eax",
+    "lea     rdx, [rax+0x1]",
+    "cmp     rax, rcx",
+    "je      0xdf83d",
+    "cmp     dl, 0x9",
+    "je      0xdf820",
+    "mov     rax, rdx"
+  ]
+}

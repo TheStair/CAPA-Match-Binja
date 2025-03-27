@@ -1,0 +1,13 @@
+{
+  "address": "0x34710",
+  "rules": [
+    "terminate process"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    exit",
+    "{ Does not return }"
+  ]
+}

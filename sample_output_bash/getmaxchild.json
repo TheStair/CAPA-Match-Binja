@@ -1,0 +1,20 @@
+{
+  "address": "0xd50f0",
+  "rules": [
+    "get system information on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rax, qword [rel data_159c40]",
+    "test    rax, rax",
+    "jle     0xd5108",
+    "push    rbp",
+    "mov     edi, 0x1",
+    "mov     rbp, rsp",
+    "call    sysconf",
+    "pop     rbp",
+    "mov     qword [rel data_159c40], rax",
+    "retn    ",
+    "retn    "
+  ]
+}

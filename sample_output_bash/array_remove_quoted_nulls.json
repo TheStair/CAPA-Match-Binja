@@ -1,0 +1,43 @@
+{
+  "address": "0x93d00",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x93d60",
+    "xor     eax, eax",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12, rdi",
+    "push    rbx",
+    "mov     rax, qword [rdi+0x10]",
+    "test    rax, rax",
+    "je      0x93d4b",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "cmp     qword [rdi+0x8], 0x0",
+    "je      0x93d50",
+    "pop     rbx",
+    "xor     eax, eax",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "mov     rbx, qword [rax+0x10]",
+    "cmp     rax, rbx",
+    "je      0x93d48",
+    "mov     rax, r12",
+    "nop     dword [rax]",
+    "mov     rdi, qword [rbx+0x8]",
+    "call    remove_quoted_nulls",
+    "mov     qword [rbx+0x8], rax",
+    "mov     rbx, qword [rbx+0x10]",
+    "cmp     qword [r12+0x10], rbx",
+    "jne     0x93d30"
+  ]
+}

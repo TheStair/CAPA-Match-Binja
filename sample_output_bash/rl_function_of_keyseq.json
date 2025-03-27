@@ -1,0 +1,29 @@
+{
+  "address": "0xee210",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "mov     r13, rdx",
+    "push    r12",
+    "mov     r12, rsi",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "call    strlen",
+    "add     rsp, 0x8",
+    "mov     rcx, r13",
+    "mov     rdx, r12",
+    "mov     rdi, rbx",
+    "mov     rsi, rax",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "jmp     sub_ee140"
+  ]
+}

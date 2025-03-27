@@ -1,0 +1,43 @@
+{
+  "address": "0x35a80",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     edi, dword [rel data_160dcc]",
+    "mov     eax, 0x1",
+    "cmp     edi, 0x11a",
+    "je      0x35adb",
+    "retn    ",
+    "lea     rax, [rel parser_state]",
+    "mov     eax, dword [rax]",
+    "and     eax, 0x80000",
+    "je      0x35ad0",
+    "lea     edx, [rdi-0x127]",
+    "cmp     edx, 0x2",
+    "ja      0x35af1",
+    "cmp     edi, 0x12e",
+    "jg      0x35ac1",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    sub_35960",
+    "pop     rbp",
+    "test    eax, eax",
+    "setne   al",
+    "movzx   eax, al",
+    "retn    ",
+    "mov     eax, 0x1",
+    "retn    ",
+    "cmp     edi, 0x121",
+    "jg      0x35ae0",
+    "lea     eax, [rdi-0x122]",
+    "mov     edx, 0x1b1f",
+    "bt      rdx, rax",
+    "jae     0x35ac1",
+    "mov     eax, edi",
+    "and     eax, 0xfffffffd",
+    "cmp     eax, 0x3c",
+    "je      0x35af1"
+  ]
+}

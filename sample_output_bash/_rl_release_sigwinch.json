@@ -1,0 +1,22 @@
+{
+  "address": "0xfacb0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     eax, dword [rel data_16af20]",
+    "test    eax, eax",
+    "jne     0xfacc0",
+    "push    rbp",
+    "xor     edx, edx",
+    "lea     rsi, [rel data_16ae20]",
+    "mov     edi, 0x2",
+    "mov     rbp, rsp",
+    "call    sigprocmask",
+    "pop     rbp",
+    "mov     dword [rel data_16af20], 0x0",
+    "retn    ",
+    "retn    "
+  ]
+}

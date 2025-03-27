@@ -1,0 +1,43 @@
+{
+  "address": "0xc2030",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "xor     eax, eax",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "cmp     edi, 0x2d",
+    "lea     rbx, [rel ignoreeof]",
+    "lea     rdi, [rel data_11f6c6]  {\"ignoreeof\"}",
+    "sete    al",
+    "mov     dword [rbx], eax",
+    "call    unbind_variable_noref",
+    "mov     eax, dword [rbx]",
+    "test    eax, eax",
+    "je      0xc2090",
+    "lea     rbx, [rel data_120045]  {\"IGNOREEOF\"}",
+    "mov     rdi, rbx",
+    "call    unbind_variable_noref",
+    "mov     rdi, rbx",
+    "call    sv_ignoreeof",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    ",
+    "lea     rbx, [rel data_120045]  {\"IGNOREEOF\"}",
+    "xor     edx, edx",
+    "lea     rsi, [rel data_1207d2[9]]  {\"10\"}",
+    "mov     rdi, rbx",
+    "call    bind_variable",
+    "mov     rdi, rbx",
+    "call    sv_ignoreeof",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    "
+  ]
+}

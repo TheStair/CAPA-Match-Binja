@@ -1,0 +1,39 @@
+{
+  "address": "0x61f40",
+  "rules": [
+    "hash data using aphash/a4d24543241b499596ce2646a61c7f5b"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel assoc_expand_once]",
+    "mov     edx, dword [rax]",
+    "test    edx, edx",
+    "je      0x61f90",
+    "mov     edx, 0x800",
+    "jmp     0x61f6c",
+    "mov     eax, dword [rel data_168068]",
+    "xor     edx, edx",
+    "test    eax, eax",
+    "setne   dl",
+    "shl     edx, 0x7",
+    "or      dh, 0x8",
+    "mov     rdi, rbx",
+    "call    bind_int_variable",
+    "test    rax, rax",
+    "je      0x61f82",
+    "mov     rdi, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "jmp     stupidly_hack_special_variables",
+    "test    dword [rax+0x28], 0x4002",
+    "jne     0x61f97",
+    "mov     esi, 0x1",
+    "lea     rdi, [rel data_167fa0]",
+    "call    __longjmp_chk",
+    "{ Does not return }"
+  ]
+}

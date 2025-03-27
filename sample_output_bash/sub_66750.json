@@ -1,0 +1,36 @@
+{
+  "address": "0x66750",
+  "rules": [
+    "contain loop",
+    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel jobs]",
+    "movsxd  rdi, edi",
+    "mov     rax, qword [rax]",
+    "mov     rcx, qword [rax+rdi*8]",
+    "mov     rdx, qword [rcx+0x8]",
+    "mov     rax, rdx",
+    "test    byte [rcx+0x18], 0x40",
+    "jne     0x66790",
+    "xor     esi, esi",
+    "nop     word [rax+rax]",
+    "nop     word [rax+rax]",
+    "mov     ecx, dword [rax+0xc]",
+    "mov     rax, qword [rax]",
+    "test    ecx, ecx",
+    "cmovne  esi, ecx",
+    "cmp     rdx, rax",
+    "jne     0x66798",
+    "mov     eax, esi",
+    "retn    ",
+    "mov     rcx, rax",
+    "mov     rax, qword [rax]",
+    "cmp     rdx, rax",
+    "jne     0x66778",
+    "mov     esi, dword [rcx+0xc]",
+    "mov     eax, esi",
+    "retn    "
+  ]
+}

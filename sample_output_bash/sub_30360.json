@@ -1,0 +1,11 @@
+{
+  "address": "0x30360",
+  "rules": [
+    "64-bit execution via heavens gate/34b74b814ad44cdb9d124ab25e875376"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    0x33",
+    "jmp     sub_30020"
+  ]
+}

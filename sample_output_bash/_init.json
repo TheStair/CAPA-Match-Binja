@@ -1,0 +1,16 @@
+{
+  "address": "0x30000",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "sub     rsp, 0x8",
+    "mov     rax, qword [rel __gmon_start__]",
+    "test    rax, rax",
+    "je      0x30016",
+    "add     rsp, 0x8",
+    "retn    ",
+    "call    rax"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "address": "0x31600",
+  "rules": [
+    "get socket status"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel select]"
+  ]
+}

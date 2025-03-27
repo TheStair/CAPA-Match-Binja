@@ -1,0 +1,23 @@
+{
+  "address": "0x88450",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rdx, [rel pending_traps]",
+    "mov     eax, 0x1",
+    "jmp     0x88472",
+    "mov     ecx, dword [rdx+rax*4]",
+    "test    ecx, ecx",
+    "je      0x88468",
+    "add     rax, 0x1",
+    "cmp     rax, 0x41",
+    "je      0x88480",
+    "retn    ",
+    "mov     eax, 0xffffffff",
+    "retn    "
+  ]
+}

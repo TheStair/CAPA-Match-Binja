@@ -1,0 +1,29 @@
+{
+  "address": "0xe4a90",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    edi, edi",
+    "jle     0xe4ac8",
+    "xor     eax, eax",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     ebx, edi",
+    "sub     rsp, 0x8",
+    "jmp     0xe4aad",
+    "call    rl_do_undo",
+    "test    eax, eax",
+    "jne     0xe4aa8",
+    "sub     ebx, 0x1",
+    "je      0xe4abb",
+    "call    rl_ding",
+    "mov     rbx, qword [rbp-0x8]",
+    "xor     eax, eax",
+    "leave   ",
+    "retn    "
+  ]
+}

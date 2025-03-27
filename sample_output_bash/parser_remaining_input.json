@@ -1,0 +1,21 @@
+{
+  "address": "0x35560",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rax, qword [rel data_160958]",
+    "test    rax, rax",
+    "je      0x35597",
+    "retn    ",
+    "mov     rdx, qword [rel data_160d88]",
+    "test    edx, edx",
+    "js      0x35590",
+    "lea     rax, [rel data_122e02]",
+    "cmp     rdx, qword [rel data_160d90]",
+    "jae     0x35590",
+    "add     rax, rdx",
+    "retn    "
+  ]
+}

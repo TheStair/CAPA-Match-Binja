@@ -1,0 +1,42 @@
+{
+  "address": "0x91a20",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x91a80",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r14",
+    "push    r13",
+    "push    r12",
+    "mov     r12, rdi",
+    "push    rbx",
+    "cmp     qword [rdi+0x8], 0x0",
+    "je      0x91a70",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     r14",
+    "pop     rbp",
+    "retn    ",
+    "mov     rax, qword [rdi+0x10]",
+    "mov     r13, rsi",
+    "mov     r14, rdx",
+    "mov     rbx, qword [rax+0x10]",
+    "cmp     rax, rbx",
+    "jne     0x91a63",
+    "mov     rsi, r14",
+    "mov     rdi, rbx",
+    "call    r13",
+    "test    eax, eax",
+    "jns     0x91a58",
+    "jmp     0x91a70",
+    "mov     rbx, qword [rbx+0x10]",
+    "cmp     rbx, qword [r12+0x10]",
+    "je      0x91a70"
+  ]
+}

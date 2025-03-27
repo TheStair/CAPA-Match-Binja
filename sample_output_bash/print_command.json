@@ -1,0 +1,23 @@
+{
+  "address": "0x49440",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rax, [rel command_string_index]",
+    "mov     dword [rel data_16105c], 0x0",
+    "mov     dword [rax], 0x0",
+    "mov     qword [rel data_161050], 0x0",
+    "mov     rbp, rsp",
+    "call    sub_48540",
+    "lea     rax, [rel the_printed_command]",
+    "lea     rsi, [rel data_1217ad[6]]  {\"%s\"}",
+    "pop     rbp",
+    "mov     edi, 0x2",
+    "mov     rdx, qword [rax]",
+    "xor     eax, eax",
+    "jmp     __printf_chk"
+  ]
+}

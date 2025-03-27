@@ -1,0 +1,10 @@
+{
+  "address": "0x31430",
+  "rules": [
+    "get file attributes"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel lstat]"
+  ]
+}

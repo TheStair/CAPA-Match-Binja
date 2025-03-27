@@ -1,0 +1,20 @@
+{
+  "address": "0x66a70",
+  "rules": [
+    "get current PID on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    initialize_job_signals",
+    "mov     rsi, qword [rel data_168460]",
+    "mov     edi, 0x12",
+    "call    set_signal_handler",
+    "call    getpid",
+    "mov     esi, 0x12",
+    "pop     rbp",
+    "mov     edi, eax",
+    "jmp     kill"
+  ]
+}

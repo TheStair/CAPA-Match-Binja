@@ -1,0 +1,39 @@
+{
+  "address": "0xd6c70",
+  "rules": [
+    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "contain loop"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     rdx, qword [rdi]",
+    "test    esi, esi",
+    "jne     0xd6cb0",
+    "test    rdx, rdx",
+    "je      0xd6ce0",
+    "mov     eax, 0x1",
+    "xor     esi, esi",
+    "test    rdx, rdx",
+    "je      0xd6c9f",
+    "xor     esi, esi",
+    "jmp     0xd6ccf",
+    "mov     eax, 0x1",
+    "nop     word [rax+rax]",
+    "lea     rcx, [rel strvec_strcmp]",
+    "mov     edx, 0x8",
+    "jmp     qsort",
+    "nop     word [rax+rax]",
+    "lea     rcx, [rel strvec_posixcmp]",
+    "mov     edx, 0x8",
+    "jmp     qsort",
+    "mov     rsi, rax",
+    "add     rax, 0x1",
+    "cmp     qword [rdi+rax*8-0x8], 0x0",
+    "jne     0xd6cc0",
+    "mov     rsi, rax",
+    "add     rax, 0x1",
+    "cmp     qword [rdi+rax*8-0x8], 0x0",
+    "jne     0xd6c90"
+  ]
+}

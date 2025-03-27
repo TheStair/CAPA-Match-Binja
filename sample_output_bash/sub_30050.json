@@ -1,0 +1,11 @@
+{
+  "address": "0x30050",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    0x2",
+    "jmp     sub_30020"
+  ]
+}

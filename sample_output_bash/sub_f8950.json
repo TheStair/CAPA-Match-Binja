@@ -1,0 +1,31 @@
+{
+  "address": "0xf8950",
+  "rules": [
+    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "encrypt data using Curve25519/71854cb5ec3d414da844548a1a695b22",
+    "hide graphical window from taskbar/b4bfaf95e3d84a8f881eeaebe3fd856e"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rbx, [rel rl_readline_state]",
+    "lea     rdx, [rel _rl_caught_signal]",
+    "mov     rax, qword [rbx]",
+    "mov     dword [rdx], edi",
+    "mov     rdx, qword [rel data_16b4e0]",
+    "or      ah, 0x80",
+    "mov     qword [rbx], rax",
+    "cmp     rdx, 0x1",
+    "jbe     0xf8988",
+    "and     ah, 0x7f",
+    "mov     qword [rbx], rax",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "call    rdx",
+    "mov     rax, qword [rbx]"
+  ]
+}

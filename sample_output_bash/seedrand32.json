@@ -1,0 +1,27 @@
+{
+  "address": "0xda260",
+  "rules": [
+    "get current PID on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "xor     esi, esi",
+    "mov     rbp, rsp",
+    "sub     rsp, 0x20",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x8], rax",
+    "xor     eax, eax",
+    "lea     rdi, [rbp-0x20]",
+    "call    gettimeofday",
+    "call    getpid",
+    "call    getppid",
+    "mov     rax, qword [rbp-0x8]",
+    "sub     rax, qword [fs:0x28]",
+    "jne     0xda2a1",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "leave   ",
+    "retn    "
+  ]
+}

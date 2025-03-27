@@ -1,0 +1,17 @@
+{
+  "address": "0x747e0",
+  "rules": [
+    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    edi, edi",
+    "js      0x74801",
+    "retn    ",
+    "cmp     dword [rel data_1685a4], edi",
+    "jle     0x74801",
+    "mov     rax, qword [rel data_1685a8]",
+    "movsxd  rdi, edi",
+    "mov     dword [rax+rdi*4], 0xffffffff"
+  ]
+}

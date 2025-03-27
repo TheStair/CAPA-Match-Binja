@@ -1,0 +1,16 @@
+{
+  "address": "0xc83a0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     qword [rel data_162ba8], 0x0",
+    "je      0xc83c7",
+    "retn    ",
+    "movsxd  rdx, dword [rel data_162bb0]",
+    "movsxd  rax, dword [rel data_162ba0]",
+    "add     rax, qword [rdi+rdx*8]",
+    "mov     qword [rel data_162ba8], rax"
+  ]
+}

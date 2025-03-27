@@ -1,0 +1,41 @@
+{
+  "address": "0xe5310",
+  "rules": [
+    "contain loop"
+  ],
+  "disassembly": [
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12d, edi",
+    "push    rbx",
+    "mov     rbx, rsi",
+    "jmp     0xe532a",
+    "mov     rsi, rbx",
+    "mov     edi, r12d",
+    "call    tcgetattr",
+    "test    eax, eax",
+    "js      0xe5320",
+    "call    __errno_location",
+    "cmp     dword [rax], 0x4",
+    "jne     0xe5350",
+    "test    byte [rbx+0xd {termios::c_lflag+1.b}], 0x10",
+    "jne     0xe5360",
+    "pop     rbx",
+    "mov     eax, 0xffffffff",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "xor     eax, eax",
+    "lea     rdi, [rel data_134570]  {\"warning: turning off output flus\u2026\"}",
+    "call    _rl_errmsg",
+    "and     dword [rbx+0xc {termios::c_lflag}], 0xffffefff {termios::c_lflag}",
+    "xor     eax, eax",
+    "jmp     0xe5341",
+    "xor     eax, eax",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "address": "0x42420",
+  "rules": [
+    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0x42470",
+    "xor     eax, eax",
+    "retn    ",
+    "movzx   edx, byte [rdi]",
+    "xor     eax, eax",
+    "test    dl, dl",
+    "je      0x42443",
+    "retn    ",
+    "mov     eax, 0x1",
+    "cmp     dl, 0x2f",
+    "je      0x42443",
+    "xor     eax, eax",
+    "cmp     dl, 0x2e",
+    "je      0x42448",
+    "movzx   edx, byte [rdi+0x1]",
+    "cmp     dl, 0x2f",
+    "je      0x42478",
+    "mov     eax, 0x1",
+    "retn    ",
+    "test    dl, dl",
+    "je      0x42478",
+    "cmp     dl, 0x2e",
+    "jne     0x42443",
+    "movzx   edx, byte [rdi+0x2]",
+    "cmp     dl, 0x2f",
+    "sete    al",
+    "test    dl, dl",
+    "sete    dl",
+    "or      eax, edx",
+    "movzx   eax, al",
+    "retn    "
+  ]
+}

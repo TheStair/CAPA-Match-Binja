@@ -1,0 +1,10 @@
+{
+  "address": "0x31370",
+  "rules": [
+    "get current user on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "jmp     qword [rel geteuid]"
+  ]
+}

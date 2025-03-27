@@ -50,8 +50,8 @@ def get_input_file():
 # with different address spaces, I opted to use their binja backend
 def capa_analyze(file_path):
     print("Running CAPA Analysis")
-    rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
-    # rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
+    # rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
+    rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
     #Sets capa's path to the rules
     rules = capa.rules.get_rules([rules_path])
 

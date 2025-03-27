@@ -1,0 +1,43 @@
+{
+  "address": "0x88640",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    byte [rel data_1612a8], 0x1",
+    "je      0x88650",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "call    strlen",
+    "lea     r12, [rax+0x1]",
+    "mov     rdi, r12",
+    "call    malloc",
+    "mov     r13, rax",
+    "test    rax, rax",
+    "je      0x8869e",
+    "retn    ",
+    "mov     rsi, r12",
+    "lea     rdi, [rel data_11f01e]  {\"xmalloc\"}",
+    "xor     eax, eax",
+    "call    sub_a7f00",
+    "{ Does not return }",
+    "mov     rsi, rbx",
+    "mov     rdi, r13",
+    "mov     rdx, r12",
+    "call    __strcpy_chk",
+    "add     rsp, 0x8",
+    "mov     rsi, r13",
+    "mov     edi, 0x42",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "jmp     sub_88510"
+  ]
+}
