@@ -43,5 +43,8 @@
     "leave   ",
     "retn    ",
     "mov     qword [rax], 0x0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

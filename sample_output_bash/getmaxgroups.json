@@ -21,5 +21,8 @@
     "mov     dword [rel data_159794], ecx",
     "retn    ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,10 +1,10 @@
 {
   "address": "0x102620",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "hide graphical window from taskbar/3804d9f76e4f47c8b3a7ed608bc3a556",
     "get current PID on Linux",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hide graphical window from taskbar/b4bfaf95e3d84a8f881eeaebe3fd856e"
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -162,5 +162,8 @@
     "test    rax, rax",
     "je      0x10272f",
     "mov     qword [rax+0x10], 0x0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -11,5 +11,8 @@
     "mov     rdi, qword [rdi+0x8]",
     "mov     rcx, qword [rax]",
     "jmp     fwrite"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

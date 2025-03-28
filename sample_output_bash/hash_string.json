@@ -1,12 +1,12 @@
 {
   "address": "0x87a50",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hash data using aphash/a4d24543241b499596ce2646a61c7f5b",
-    "contain loop",
-    "decompress data using aPLib/ff5291873cd74f0a8431aa4f49359663",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "hash data using aphash/dcaeaf6452d04e9abeab247e18cee1ca",
     "encode data using XOR",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745"
+    "contain loop",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "decompress data using aPLib/b79fa41969a648e5912d52a379978f68"
   ],
   "disassembly": [
     "endbr64 ",
@@ -33,5 +33,8 @@
     "test    sil, sil",
     "jne     0x87a68",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

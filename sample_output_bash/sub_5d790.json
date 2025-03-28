@@ -1,7 +1,7 @@
 {
   "address": "0x5d790",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
     "contain loop"
   ],
   "disassembly": [
@@ -83,5 +83,36 @@
     "mov     rcx, qword [rbp-0x38 {var_40_1}]",
     "mov     qword [rcx+r15*8], r14",
     "jmp     0x5d7fd"
+  ],
+  "high level IL": [
+    "if ((not.d(arg1[5].d) & 0x300000) == 0)",
+    "return sub_5d590(arg1) __tailcall",
+    "char* rbx = *arg1",
+    "char const (* i)[0xc] = data_1599e0",
+    "if (i != 0)",
+    "int32_t r14_1 = sx.d(*rbx)",
+    "char const (** r13_1)[0xe] = &data_1599f0",
+    "int32_t rax_2 = sx.d(*i)",
+    "int32_t rax_3 = rax_2 - r14_1",
+    "if (rax_2 == r14_1)",
+    "rax_3 = strcmp(i, rbx)",
+    "if (rax_3 == 0)",
+    "uint64_t r13_2 = strlen(rbx) + 1",
+    "char* rax_6 = malloc(r13_2)",
+    "if (rax_6 == 0)",
+    "sub_a7f00()",
+    "noreturn",
+    "uint64_t tempvar_list_1 = tempvar_list",
+    "int64_t tvlist_ind_1 = sx.q(tvlist_ind)",
+    "tvlist_ind = (tvlist_ind_1 + 1).d",
+    "__strcpy_chk(rax_6, rbx, r13_2)",
+    "*(tempvar_list_1 + (tvlist_ind_1 << 3)) = rax_6",
+    "break",
+    "if (rax_3 s> 0)",
+    "break",
+    "i = *r13_1",
+    "r13_1 = &r13_1[2]",
+    "do while (i != 0)",
+    "return dispose_variable(arg1) __tailcall"
   ]
 }

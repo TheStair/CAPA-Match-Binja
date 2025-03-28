@@ -1,9 +1,9 @@
 {
   "address": "0xdfc20",
   "rules": [
-    "get file attributes",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check file permission on Linux"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check file permission on Linux",
+    "get file attributes"
   ],
   "disassembly": [
     "push    rbp",
@@ -102,5 +102,8 @@
     "nop     dword [rax+rax]",
     "mov     r12d, 0x2a",
     "jmp     0xdfd20"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

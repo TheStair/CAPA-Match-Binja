@@ -26,5 +26,8 @@
     "test    rdx, rdx",
     "je      0x106027",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

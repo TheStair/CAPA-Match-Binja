@@ -1,8 +1,8 @@
 {
   "address": "0x47b50",
   "rules": [
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055"
   ],
   "disassembly": [
     "push    rbp",
@@ -59,5 +59,8 @@
     "xor     eax, eax",
     "pop     rbp",
     "jmp     sub_473b0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

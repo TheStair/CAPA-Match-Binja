@@ -70,5 +70,8 @@
     "call    putchar",
     "mov     dword [rbp-0x14], 0x1",
     "jmp     0x40335"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

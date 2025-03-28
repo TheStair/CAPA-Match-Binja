@@ -106,5 +106,8 @@
     "test    eax, eax",
     "jne     0x102dd0",
     "call    qword [r12]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

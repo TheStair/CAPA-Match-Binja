@@ -1,9 +1,9 @@
 {
   "address": "0xcc940",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "contain loop",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "contain loop"
   ],
   "disassembly": [
     "endbr64 ",
@@ -68,5 +68,30 @@
     "pop     r15 {__saved_r15}",
     "pop     rbp {__saved_rbp}",
     "retn     {__return_addr}"
+  ],
+  "high level IL": [
+    "int64_t result = malloc(0x1d8)",
+    "if (result == 0)",
+    "sub_a7f00()",
+    "noreturn",
+    "char const (** const r14)[0x12] = &data_156098",
+    "int64_t r13 = 1",
+    "uint64_t rax = 6",
+    "void* const r12 = \"autocd\"",
+    "while (true)",
+    "char* domainname = malloc(rax + 1)",
+    "if (domainname == 0)",
+    "fatal_error(dcgettext(domainname, \"%s: cannot allocate %lu bytes\", 5), 0)",
+    "noreturn",
+    "r14 = &r14[3]",
+    "char* rax_1 = __strcpy_chk(domainname, r12, rax + 1)",
+    "r12 = r14[-3]",
+    "*(result + (r13 << 3) - 8) = rax_1",
+    "if (r12 == 0)",
+    "break",
+    "r13 += 1",
+    "rax = strlen(r12)",
+    "*(result + (sx.q(r13.d) << 3)) = 0",
+    "return result"
   ]
 }

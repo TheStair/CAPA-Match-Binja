@@ -60,5 +60,8 @@
     "mov     rbx, rax",
     "test    byte [rbx+0x29], 0x8",
     "jne     0x50526"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

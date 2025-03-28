@@ -68,5 +68,8 @@
     "cmp     byte [r13+0x1], 0x0",
     "jne     0x47b40",
     "nop     dword [rax]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

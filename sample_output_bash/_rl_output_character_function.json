@@ -8,5 +8,8 @@
     "lea     rax, [rel _rl_out_stream]",
     "mov     rsi, qword [rax]",
     "jmp     putc"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

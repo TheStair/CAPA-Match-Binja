@@ -1,10 +1,10 @@
 {
   "address": "0x667b0",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "encrypt data using Curve25519/71854cb5ec3d414da844548a1a695b22",
-    "decompress data using aPLib/38731ecee1994e99b9627ed54594e559",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "encrypt data using Curve25519/7d070d905d0942e295bbb2c9df72fc86",
+    "decompress data using aPLib/54aa508e15f34aa5847662ea1b5aeb9c"
   ],
   "disassembly": [
     "endbr64 ",
@@ -26,5 +26,8 @@
     "pop     rbp",
     "cmovne  eax, edx",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

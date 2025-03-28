@@ -1,24 +1,24 @@
 {
   "address": "0xf5b00",
   "rules": [
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "encrypt data using XXTEA/8b51ac557ada4334b6544ffbf490740a/6611357b470d4f51a55c8b60d2040800",
-    "decrypt data using TEA/b2f1d7a7bfa04984a8dca63866a95e23/65029a7be1a74342926ce5af1066d3d1",
-    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "encrypt data using XXTEA/c3f2a9482f0d43a8bf071fa39e1b4168/ea2ab02de6a64ee191b417bab5bfc302",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
     "write file on Linux",
-    "log keystrokes via raw input data/4762f396f48d4e318a08125296476d20",
-    "encrypt data using Curve25519/f2994133291147a090851ed21e9c381b",
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436",
+    "log keystrokes via raw input data/5b32ff98460e406e86dc2ef8d82ba1a5",
+    "decrypt data using TEA/e3455f541322464e87e33d73effdac9c/c9ea650c1ee846d4b0844b5a3685e146",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "encrypt data using Curve25519/a423aa5d0923438c8eac88d5abe4fcd5",
     "contain loop",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e",
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "allocate or change RW memory/b4e5a298cb404535abd304755b86823e",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
-    "encrypt data using TEA/6daa315fd3424f3e9ddc04a16106b42a/a391c789b13342be8944ab433e4f9dba"
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "allocate or change RW memory/877cb0b79bfa432e8e79b8bd20fa354f",
+    "encrypt data using TEA/f68c13fdd9924dacbb04fb3766fcc8ea/b98afe217679411c944f0cab12b002af",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828"
   ],
   "disassembly": [
     "endbr64 ",
@@ -2546,5 +2546,8 @@
     "test    edx, edx",
     "je      0xf83f0",
     "jmp     0xf7430"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

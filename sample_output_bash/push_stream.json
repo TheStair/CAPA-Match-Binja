@@ -1,8 +1,8 @@
 {
   "address": "0x34df0",
   "rules": [
-    "encrypt data using AES MixColumns step/6bd9351b483f4ccc8171068b67c48341",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "encrypt data using AES MixColumns step/51f5821f8bb24d35a0bb7f6d3fb45f3a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -57,5 +57,8 @@
     "pop     rbp",
     "retn    ",
     "mov     dword [rdx], 0x0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

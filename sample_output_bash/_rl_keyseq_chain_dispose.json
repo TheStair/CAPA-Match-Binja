@@ -23,5 +23,8 @@
     "mov     rdi, qword [rbx]",
     "test    rdi, rdi",
     "jne     0xe0060"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

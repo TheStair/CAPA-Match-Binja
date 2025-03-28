@@ -23,5 +23,8 @@
     "leave   ",
     "movzx   eax, al",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,18 +1,18 @@
 {
   "address": "0x72bd0",
   "rules": [
-    "hash data using aphash/8f862f7edc7641079bc7234f31736b95",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hash data using aphash/ef28217586414e46ab1e9ea5fafa8c30",
-    "hash data with CRC32/6874091fc240423886717926d876159d",
-    "encrypt data using XTEA/10ee0a8316f84c4781969a6e3e0ea247/37fcdffa79f84274a0a7280c1c8f403a",
-    "check for kernel debugger via shared user data structure/300b95c5a43549898dd5e28afc704e20",
-    "encrypt data using TEA/d92840dc497d469aaa95c1543453a00c/2595307ea71d425c8c0b4e2392af2cf7",
-    "decrypt data using TEA/066cb8df2a774080be2d27329c2aadaf/ba22e5cbb4214cdaa9e658605c2a045c",
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "encrypt data using XTEA/5c1c4c90f3124e8b8e496a40b647bc29/4f0637c1ae9b445ca3ec93a4b4e0bb6d",
+    "hash data using aphash/2602c80a9b3846b9ae92e2e83b13e866",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "encrypt data using XXTEA/55da17cb2d2b4f30ac54eab7c66fa3d3/af1fc90a7adf4a2ea648cfac1c599984",
     "contain loop",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "encrypt data using XXTEA/41ded627096c472a8da56bad13f19605/03953aa079f14ec384dfb3745989fa21"
+    "decrypt data using TEA/ab7f9f2b007f48f680d6bcb7da99c5f3/bee29d5f30484915bb6e92fdf1038d2c",
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "encrypt data using TEA/125a16c5ca784de5b4ec344bb7f45260/9710d9ee76a4466b954966f2a98c40ba",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -173,5 +173,8 @@
     "mov     rax, qword [rbp-0x60]",
     "mov     qword [rbp-0x40], rax",
     "jmp     0x72d1d"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

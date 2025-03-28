@@ -1,7 +1,7 @@
 {
   "address": "0xd4830",
   "rules": [
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436"
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c"
   ],
   "disassembly": [
     "endbr64 ",
@@ -84,5 +84,8 @@
     "mov     rax, qword [rax]",
     "mov     ebx, dword [rax+r14*4]",
     "jmp     0xd48b6"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

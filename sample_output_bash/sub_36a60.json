@@ -24,5 +24,8 @@
     "mov     edi, 0x3",
     "call    jump_to_top_level",
     "{ Does not return }"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

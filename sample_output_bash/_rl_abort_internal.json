@@ -33,5 +33,8 @@
     "call    _rl_pop_executing_macro",
     "cmp     qword [rbx], 0x0",
     "jne     0xfbe78"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

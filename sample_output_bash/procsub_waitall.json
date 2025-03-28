@@ -26,5 +26,8 @@
     "mov     eax, dword [rbx+0x10]",
     "test    eax, eax",
     "je      0x65fe1"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

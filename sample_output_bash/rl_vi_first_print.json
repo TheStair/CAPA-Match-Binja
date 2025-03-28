@@ -27,5 +27,8 @@
     "cmp     dl, 0x9",
     "je      0xdf820",
     "mov     rax, rdx"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

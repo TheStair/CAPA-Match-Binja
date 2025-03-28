@@ -69,5 +69,8 @@
     "or      eax, dword [rdx]",
     "setne   sil",
     "mov     rbx, rax"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

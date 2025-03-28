@@ -1,9 +1,9 @@
 {
   "address": "0xf8950",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "encrypt data using Curve25519/71854cb5ec3d414da844548a1a695b22",
-    "hide graphical window from taskbar/b4bfaf95e3d84a8f881eeaebe3fd856e"
+    "hide graphical window from taskbar/3804d9f76e4f47c8b3a7ed608bc3a556",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "encrypt data using Curve25519/7d070d905d0942e295bbb2c9df72fc86"
   ],
   "disassembly": [
     "endbr64 ",
@@ -27,5 +27,8 @@
     "retn    ",
     "call    rdx",
     "mov     rax, qword [rbx]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

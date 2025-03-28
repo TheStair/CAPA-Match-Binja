@@ -25,5 +25,8 @@
     "mov     rbx, qword [rbp-0x8]",
     "leave   ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

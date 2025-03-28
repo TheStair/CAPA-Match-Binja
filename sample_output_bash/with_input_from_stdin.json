@@ -23,5 +23,8 @@
     "lea     rdi, [rel sub_36ab0]",
     "mov     r8, qword [rax]",
     "jmp     init_yy_io"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

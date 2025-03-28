@@ -1,24 +1,24 @@
 {
   "address": "0xd8a80",
   "rules": [
-    "hash data using aphash/1c6766435cde44639c26b9e1f0d91a11",
-    "hash data using aphash/8f862f7edc7641079bc7234f31736b95",
-    "PEB access/fd0dc33357ac4dfab7ffc937f75726c6",
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "hash data with CRC32/9576910bfc754e15b215ae4d3227da01",
-    "encrypt data using HC-128/26adaa3641374fccbeddc33b759c970e",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "hash data with CRC32/6874091fc240423886717926d876159d",
-    "decompress data using aPLib/0343e5a0b17b4d2cad7af66693469884",
-    "check for kernel debugger via shared user data structure/300b95c5a43549898dd5e28afc704e20",
+    "encrypt data using XXTEA/55da17cb2d2b4f30ac54eab7c66fa3d3/bfdff12b2adb42709a78f0e77631902b",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "decompress data using aPLib/c6c954600822435a9c47b62afd183d7b",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
     "contain loop",
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "check for kernel debugger via shared user data structure/47a8170337e74f7ca5a6c64253eb43bf",
-    "encrypt data using XXTEA/41ded627096c472a8da56bad13f19605/9f5ed5341ae94a0d943f2c8a6a459760",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "PEB access/684066f105bd43c0a5be1ea6f2b60301",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "hash data using aphash/416ed7212e694999bd9567d4aa818bae",
+    "hash data with CRC32/a62eba34c54041488d4eb8afa76fce3c",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "check for kernel debugger via shared user data structure/8dba58369c324a29b2fa79b10c98c249",
+    "encrypt data using HC-128/e8f9b1d76e624bf6b554df630e614cdc"
   ],
   "disassembly": [
     "endbr64 ",
@@ -276,5 +276,8 @@
     "cmp     rdi, r10",
     "jb      0xd8ce9",
     "jmp     0xd8d48"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -50,5 +50,8 @@
     "call    dispose_words",
     "test    rbx, rbx",
     "je      0x1183e5"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

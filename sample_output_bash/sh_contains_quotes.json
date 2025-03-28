@@ -1,9 +1,9 @@
 {
   "address": "0xd7f10",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
     "contain loop"
   ],
   "disassembly": [
@@ -25,5 +25,8 @@
     "jb      0xd7f48",
     "mov     eax, 0x1",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "address": "0x446a0",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -23,5 +23,8 @@
     "mov     rbx, qword [rbp-0x8]",
     "leave   ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

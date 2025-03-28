@@ -1,8 +1,8 @@
 {
   "address": "0x48420",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
   ],
   "disassembly": [
     "push    rbp",
@@ -72,5 +72,8 @@
     "jmp     sub_473b0",
     "cmp     al, 0xa",
     "je      0x48504"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

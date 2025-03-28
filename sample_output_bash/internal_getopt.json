@@ -1,12 +1,12 @@
 {
   "address": "0xcd7f0",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436",
-    "validate payment card number using luhn algorithm with no lookup table/0059d27492404457aae5e3fcbcc694d6",
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "validate payment card number using luhn algorithm with no lookup table/8892c2373e0049b284ce06439c67d582/348c839897674d18b1a1edb1d1470e33",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745"
+    "validate payment card number using luhn algorithm with no lookup table/d1aa048b20f94c0db48b1ae538432626",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "validate payment card number using luhn algorithm with no lookup table/c7424b8f4dd24e28bdb38bbfd0000b7d/5cd90ca8b31f4cdd8124133557051a20"
   ],
   "disassembly": [
     "endbr64 ",
@@ -283,5 +283,8 @@
     "cmp     byte [rbp-0x42], 0x2b",
     "jne     0xcd9e8",
     "nop     dword [rax]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

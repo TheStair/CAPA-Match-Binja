@@ -1,15 +1,15 @@
 {
   "address": "0xbcf90",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe",
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c",
+    "parse credit card information/c65156d6503b4b6d844d6d07c3ef83fd",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
     "contain loop",
-    "parse credit card information/3b00006a5d1548b6a3ebe31cf2b80726",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828"
   ],
   "disassembly": [
     "endbr64 ",
@@ -181,5 +181,8 @@
     "movsx   esi, byte [r15]",
     "test    sil, sil",
     "je      0xbd01c"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

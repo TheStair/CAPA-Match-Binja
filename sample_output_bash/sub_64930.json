@@ -1,8 +1,8 @@
 {
   "address": "0x64930",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
     "contain loop"
   ],
   "disassembly": [
@@ -230,5 +230,8 @@
     "mov     rbx, rdx",
     "shl     rbx, 0x3f",
     "jmp     0x64a50"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

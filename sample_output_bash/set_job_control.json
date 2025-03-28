@@ -1,9 +1,9 @@
 {
   "address": "0x66e60",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check if file exists/33e235b3e802457492251bc0c05ce35e/2e923016c5754d05a3af5b3b8024a7e6"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "check if file exists/e9b7e5653fc74459b4a2998e8ac0c76d/291bac4dc2fd4faeafd7747b61108764"
   ],
   "disassembly": [
     "endbr64 ",
@@ -68,5 +68,8 @@
     "pop     r13",
     "pop     rbp",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

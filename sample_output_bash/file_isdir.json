@@ -29,5 +29,8 @@
     "{ Does not return }",
     "leave   ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

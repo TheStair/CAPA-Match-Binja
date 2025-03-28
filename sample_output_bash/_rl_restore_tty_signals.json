@@ -41,5 +41,8 @@
     "pop     rbp",
     "retn    ",
     "mov     dword [rax], 0x0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

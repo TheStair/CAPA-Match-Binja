@@ -1,7 +1,7 @@
 {
   "address": "0xda350",
   "rules": [
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
   ],
   "disassembly": [
     "endbr64 ",
@@ -36,5 +36,8 @@
     "mov     rbx, qword [rbp-0x8]",
     "leave   ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

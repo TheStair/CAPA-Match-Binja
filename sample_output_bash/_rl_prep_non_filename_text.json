@@ -1,8 +1,8 @@
 {
   "address": "0x111070",
   "rules": [
-    "write file on Linux",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "write file on Linux"
   ],
   "disassembly": [
     "endbr64 ",
@@ -39,5 +39,14 @@
     "pop     r12 {__saved_r12}",
     "pop     rbp {__saved_rbp}",
     "jmp     fwrite"
+  ],
+  "high level IL": [
+    "uint64_t rl_outstream_1 = rl_outstream",
+    "int64_t rdi = data_160368",
+    "if (rdi != 0)",
+    "return fwrite(rdi, data_160360, 1, rl_outstream_1) __tailcall",
+    "fwrite(data_160348, _rl_color_indicator, 1, rl_outstream_1)",
+    "fwrite(data_160378, data_160370, 1, rl_outstream)",
+    "return fwrite(data_160358, data_160350, 1, rl_outstream) __tailcall"
   ]
 }

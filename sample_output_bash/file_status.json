@@ -1,15 +1,15 @@
 {
   "address": "0xa7d90",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "encrypt data using Curve25519/f2994133291147a090851ed21e9c381b",
-    "log keystrokes via raw input data/4762f396f48d4e318a08125296476d20",
-    "contain loop",
+    "log keystrokes via raw input data/5b32ff98460e406e86dc2ef8d82ba1a5",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "encrypt data using Curve25519/a423aa5d0923438c8eac88d5abe4fcd5",
     "get file attributes",
-    "PEB access/fd0dc33357ac4dfab7ffc937f75726c6",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+    "PEB access/684066f105bd43c0a5be1ea6f2b60301",
+    "contain loop",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -76,5 +76,8 @@
     "jmp     0xa7e1b",
     "add     rbx, 0x10",
     "mov     ebx, 0x1"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

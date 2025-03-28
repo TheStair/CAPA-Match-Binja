@@ -21,5 +21,8 @@
     "mov     qword [rel data_161a50], 0x0",
     "pop     rbp",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

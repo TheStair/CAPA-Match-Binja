@@ -43,5 +43,8 @@
     "mov     esi, eax",
     "test    ebx, ebx",
     "jle     0x106f83"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

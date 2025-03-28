@@ -1,8 +1,8 @@
 {
   "address": "0xdfb60",
   "rules": [
-    "decompress data using LZO/092a7ec81c914a2c8dcd8934990c5995",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "decompress data using LZO/eb3121acf7214c64b84ac9b7cddcf413"
   ],
   "disassembly": [
     "push    rbp",
@@ -61,5 +61,8 @@
     "{ Does not return }",
     "mov     qword [rel data_16a640], r13",
     "jmp     0xdfb82"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

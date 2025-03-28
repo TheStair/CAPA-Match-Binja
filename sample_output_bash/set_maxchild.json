@@ -51,5 +51,8 @@
     "mov     dword [rel data_159c48], 0x8000",
     "mov     edx, 0x8000",
     "jmp     0x66fd9"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -39,5 +39,8 @@
     "mov     rsi, rdx",
     "cmp     al, 0x20",
     "je      0xa6fd0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

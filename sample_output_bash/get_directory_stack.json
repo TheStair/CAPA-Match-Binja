@@ -1,12 +1,12 @@
 {
   "address": "0xbeeb0",
   "rules": [
-    "hash data using aphash/8f862f7edc7641079bc7234f31736b95",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hash data with CRC32/6874091fc240423886717926d876159d",
-    "check for kernel debugger via shared user data structure/300b95c5a43549898dd5e28afc704e20",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
     "contain loop",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745"
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -134,5 +134,8 @@
     "xor     eax, eax",
     "call    sub_a7f00",
     "{ Does not return }"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

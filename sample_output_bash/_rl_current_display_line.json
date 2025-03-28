@@ -1,10 +1,10 @@
 {
   "address": "0xf9e60",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "encrypt data using XXTEA/8b51ac557ada4334b6544ffbf490740a/6611357b470d4f51a55c8b60d2040800",
-    "decrypt data using TEA/b2f1d7a7bfa04984a8dca63866a95e23/65029a7be1a74342926ce5af1066d3d1",
-    "encrypt data using TEA/6daa315fd3424f3e9ddc04a16106b42a/a391c789b13342be8944ab433e4f9dba"
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "decrypt data using TEA/e3455f541322464e87e33d73effdac9c/c9ea650c1ee846d4b0844b5a3685e146",
+    "encrypt data using XXTEA/c3f2a9482f0d43a8bf071fa39e1b4168/ea2ab02de6a64ee191b417bab5bfc302",
+    "encrypt data using TEA/f68c13fdd9924dacbb04fb3766fcc8ea/b98afe217679411c944f0cab12b002af"
   ],
   "disassembly": [
     "endbr64 ",
@@ -29,5 +29,8 @@
     "cdq     ",
     "idiv    ecx",
     "lea     edx, [rax+0x1]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

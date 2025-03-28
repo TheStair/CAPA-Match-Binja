@@ -1,10 +1,10 @@
 {
   "address": "0x11a4d0",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
     "contain loop",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
   ],
   "disassembly": [
     "endbr64 ",
@@ -84,5 +84,39 @@
     "mov     eax, 0x61",
     "movzx   r13d, byte [rbx]",
     "jmp     0x11a53b"
+  ],
+  "high level IL": [
+    "int32_t var_40",
+    "if (arg2 == 0)",
+    "var_40 = 0",
+    "var_40 = 0",
+    "void** i = arg2",
+    "char const (** const r14_1)[0x12] = &data_156098",
+    "int32_t r15_1 = 0",
+    "char const* const rsi = \"autocd\"",
+    "char* rbx_1 = *i[1]",
+    "char const rax_2 = 0x61",
+    "char r13_1 = *rbx_1",
+    "while (true)",
+    "if (r13_1 == rax_2 && strcmp(rbx_1, rsi) == 0)",
+    "int64_t rcx_1 = sx.q(r15_1)",
+    "*(&data_156088)[rcx_1 * 3] = arg1",
+    "int64_t rdx_2 = *(rcx_1 * 0x18 + 0x156090)",
+    "if (rdx_2 != 0)",
+    "rdx_2((&data_156080)[rcx_1 * 3], zx.q(arg1))",
+    "break",
+    "rsi = *r14_1",
+    "r14_1 = &r14_1[3]",
+    "r15_1 += 1",
+    "if (rsi == 0)",
+    "builtin_error(dcgettext(nullptr, \"%s: invalid shell option name\", 5), 0)",
+    "var_40 = 1",
+    "break",
+    "rax_2 = *rsi",
+    "i = *i",
+    "do while (i != 0)",
+    "if (find_variable(\"BASHOPTS\") != 0)",
+    "set_bashopts()",
+    "return zx.q(var_40)"
   ]
 }

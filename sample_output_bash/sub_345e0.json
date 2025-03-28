@@ -1,9 +1,9 @@
 {
   "address": "0x345e0",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "contain loop",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "contain loop"
   ],
   "disassembly": [
     "push    rbp",
@@ -35,5 +35,8 @@
     "je      0x345f8",
     "cmp     qword [rax+0x18], 0x0",
     "jne     0x345e8"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

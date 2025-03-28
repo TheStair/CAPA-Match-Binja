@@ -1,12 +1,12 @@
 {
   "address": "0xe8920",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe",
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828"
   ],
   "disassembly": [
     "push    rbp",
@@ -178,5 +178,8 @@
     "mov     qword [rax], rdx",
     "test    ecx, ecx",
     "jne     0xe8af0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

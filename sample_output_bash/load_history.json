@@ -67,5 +67,8 @@
     "lea     rax, [rel history_offset]",
     "mov     dword [rax], edx",
     "jmp     0x9be72"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

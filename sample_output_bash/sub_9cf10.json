@@ -1,8 +1,8 @@
 {
   "address": "0x9cf10",
   "rules": [
-    "get file attributes",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "get file attributes"
   ],
   "disassembly": [
     "push    rbp",
@@ -89,5 +89,8 @@
     "lea     rdx, [rbx+rax-0x1]",
     "movzx   eax, byte [rdx]",
     "jmp     0x9cf63"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

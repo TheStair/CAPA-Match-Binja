@@ -25,5 +25,8 @@
     "pop     rbp",
     "retn    ",
     "call    free"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

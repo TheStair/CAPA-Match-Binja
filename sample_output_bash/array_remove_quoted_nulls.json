@@ -39,5 +39,8 @@
     "mov     rbx, qword [rbx+0x10]",
     "cmp     qword [r12+0x10], rbx",
     "jne     0x93d30"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

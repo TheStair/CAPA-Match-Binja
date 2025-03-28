@@ -46,5 +46,8 @@
     "mov     rax, qword [rdi+0x28]",
     "test    rax, rax",
     "je      0x5ac79"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

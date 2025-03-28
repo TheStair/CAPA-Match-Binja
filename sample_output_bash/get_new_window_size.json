@@ -1,9 +1,9 @@
 {
   "address": "0xdd3a0",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c"
   ],
   "disassembly": [
     "endbr64 ",
@@ -75,5 +75,8 @@
     "movzx   eax, word [rbp-0x1e]",
     "mov     dword [r12], eax",
     "jmp     0xdd3d8"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,17 +1,17 @@
 {
   "address": "0x87ec0",
   "rules": [
-    "hash data using aphash/8f862f7edc7641079bc7234f31736b95",
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hash data using aphash/a4d24543241b499596ce2646a61c7f5b",
-    "hash data with CRC32/6874091fc240423886717926d876159d",
-    "check for kernel debugger via shared user data structure/300b95c5a43549898dd5e28afc704e20",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e",
-    "contain loop",
-    "decompress data using aPLib/ff5291873cd74f0a8431aa4f49359663",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "hash data using aphash/dcaeaf6452d04e9abeab247e18cee1ca",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
     "encode data using XOR",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745"
+    "contain loop",
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "decompress data using aPLib/b79fa41969a648e5912d52a379978f68"
   ],
   "disassembly": [
     "endbr64 ",
@@ -111,5 +111,8 @@
     "mov     dword [r14+0x18], ebx",
     "mov     dword [r14+0x1c], 0x0",
     "add     dword [r12+0xc], 0x1"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

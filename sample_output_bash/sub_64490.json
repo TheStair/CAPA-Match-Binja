@@ -1,8 +1,8 @@
 {
   "address": "0x64490",
   "rules": [
-    "encrypt data using RC4 PRGA",
-    "contain loop"
+    "contain loop",
+    "encrypt data using RC4 PRGA"
   ],
   "disassembly": [
     "push    rbp",
@@ -125,5 +125,8 @@
     "lea     eax, [rbx-0x1]",
     "cmp     eax, 0x1",
     "ja      0x645f0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

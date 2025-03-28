@@ -16,5 +16,8 @@
     "mov     qword [rel data_159c40], rax",
     "retn    ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

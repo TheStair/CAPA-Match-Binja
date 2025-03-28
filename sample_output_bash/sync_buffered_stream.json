@@ -1,7 +1,7 @@
 {
   "address": "0x89080",
   "rules": [
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
   ],
   "disassembly": [
     "endbr64 ",
@@ -34,5 +34,8 @@
     "mov     qword [rbx+0x28], 0x0",
     "xor     eax, eax",
     "mov     qword [rbx+0x18], 0x0"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

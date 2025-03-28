@@ -1,7 +1,7 @@
 {
   "address": "0x54be0",
   "rules": [
-    "encrypt data using Curve25519/f2994133291147a090851ed21e9c381b"
+    "encrypt data using Curve25519/a423aa5d0923438c8eac88d5abe4fcd5"
   ],
   "disassembly": [
     "endbr64 ",
@@ -22,5 +22,8 @@
     "mov     rbx, qword [rbp-0x8]",
     "leave   ",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

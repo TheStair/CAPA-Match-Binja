@@ -1,10 +1,10 @@
 {
   "address": "0xccc90",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
     "contain loop",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
   ],
   "disassembly": [
     "endbr64 ",
@@ -77,5 +77,38 @@
     "mov     rdi, qword [rax]",
     "mov     esi, 0x1",
     "call    rdx"
+  ],
+  "high level IL": [
+    "void* fsbase",
+    "int64_t rax = *(fsbase + 0x28)",
+    "int32_t var_44 = 0",
+    "while (true)",
+    "char* rax_1 = extract_colon_unit(arg1, &var_44)",
+    "if (rax_1 == 0)",
+    "break",
+    "char r13_1 = *rax_1",
+    "char rax_2 = 0x61",
+    "int32_t r15_1 = 0",
+    "char* rsi_2 = \"autocd\"",
+    "char** r12_1 = &data_156098",
+    "while (true)",
+    "if (r13_1 == rax_2 && strcmp(rax_1, rsi_2) == 0)",
+    "int64_t rcx_1 = sx.q(r15_1)",
+    "*(&data_156088)[rcx_1 * 3] = 1",
+    "int64_t rdx_2 = *(rcx_1 * 0x18 + 0x156090)",
+    "if (rdx_2 != 0)",
+    "rdx_2((&data_156080)[rcx_1 * 3], 1)",
+    "break",
+    "rsi_2 = *r12_1",
+    "r12_1 = &r12_1[3]",
+    "r15_1 += 1",
+    "if (rsi_2 == 0)",
+    "break",
+    "rax_2 = *rsi_2",
+    "free(rax_1)",
+    "if (rax == *(fsbase + 0x28))",
+    "return rax - *(fsbase + 0x28)",
+    "__stack_chk_fail()",
+    "noreturn"
   ]
 }

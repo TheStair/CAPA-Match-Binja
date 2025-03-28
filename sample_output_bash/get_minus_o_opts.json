@@ -1,8 +1,8 @@
 {
   "address": "0xbcc00",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
     "contain loop"
   ],
   "disassembly": [
@@ -39,5 +39,23 @@
     "mov     rbx, qword [rbp-0x8 {__saved_rbx}]",
     "leave    {__saved_rbp}",
     "retn     {__return_addr}"
+  ],
+  "high level IL": [
+    "int64_t result = malloc(0xe8)",
+    "if (result == 0)",
+    "sub_a7f00()",
+    "noreturn",
+    "char const* const i = \"allexport\"",
+    "char const (** const rcx)[0xc] = &data_155a28",
+    "int64_t rax = 1",
+    "int32_t rsi_1",
+    "*(result + (rax << 3) - 8) = i",
+    "i = *rcx",
+    "rsi_1 = rax.d",
+    "rcx = &rcx[5]",
+    "rax += 1",
+    "do while (i != 0)",
+    "*(result + (sx.q(rsi_1) << 3)) = 0",
+    "return result"
   ]
 }

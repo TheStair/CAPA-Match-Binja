@@ -1,8 +1,8 @@
 {
   "address": "0xaaa10",
   "rules": [
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
     "contain loop"
   ],
   "disassembly": [
@@ -65,5 +65,40 @@
     "add     rdx, 0x1",
     "cmp     qword [rax+rdx*8-0x8], 0x0",
     "jne     0xaaaa8"
+  ],
+  "high level IL": [
+    "int64_t* rax = malloc(0x10)",
+    "if (rax == 0)",
+    "sub_a7f00()",
+    "noreturn",
+    "*rax = 0",
+    "rax[1] = 0",
+    "int64_t* rax_1 = malloc(0xe8)",
+    "if (rax_1 == 0)",
+    "sub_a7f00()",
+    "noreturn",
+    "char const* const i = \"allexport\"",
+    "char const (** const rsi)[0xc] = &data_155a28",
+    "int64_t rdx = 1",
+    "int32_t rdi",
+    "rax_1[rdx - 1] = i",
+    "i = *rsi",
+    "rdi = rdx.d",
+    "rsi = &rsi[5]",
+    "rdx += 1",
+    "do while (i != 0)",
+    "*rax = rax_1",
+    "rax_1[sx.q(rdi)] = 0",
+    "int32_t rcx",
+    "if (*rax_1 == 0)",
+    "rcx = 0",
+    "int64_t rdx_1 = 1",
+    "rcx = rdx_1.d",
+    "rdx_1 += 1",
+    "do while (rax_1[rdx_1 - 1] != 0)",
+    "*arg1 |= 0x20",
+    "*(rax + 0xc) = rcx",
+    "*(arg1 + 0x10) = rax",
+    "return 0"
   ]
 }

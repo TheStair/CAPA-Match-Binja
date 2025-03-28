@@ -1,10 +1,10 @@
 {
   "address": "0x911d0",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "check for software breakpoints/327d7e2a69024accaa8b20822309fd94",
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+    "check for software breakpoints/cecbbf056424483382f102b7b1120e0d",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -140,5 +140,8 @@
     "jne     0x91312",
     "mov     dword [rel data_1687a4], 0x2",
     "jmp     0x91255"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

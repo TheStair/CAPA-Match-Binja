@@ -1,10 +1,10 @@
 {
   "address": "0x107e70",
   "rules": [
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae",
-    "log keystrokes via raw input data/4762f396f48d4e318a08125296476d20"
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "log keystrokes via raw input data/5b32ff98460e406e86dc2ef8d82ba1a5"
   ],
   "disassembly": [
     "endbr64 ",
@@ -14,5 +14,8 @@
     "cmp     dword [rax], 0x1",
     "adc     edi, 0x0",
     "jmp     rl_forward_char"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

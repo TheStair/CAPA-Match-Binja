@@ -1,26 +1,26 @@
 {
   "address": "0x8bb30",
   "rules": [
-    "check Internet connectivity via WinINet/43caef4d101b49198d8cca771ce14a21",
-    "hash data using aphash/8f862f7edc7641079bc7234f31736b95",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "hash data using djb2/8952edc10f1448bdba19a64c9f144796",
-    "populate SysWhispers2 syscall list/c39b22f6e84241eca7804bd75e10f745",
-    "decrypt data using TEA/066cb8df2a774080be2d27329c2aadaf/71ff62d8869d418e88d129a8b5fcc11b",
-    "check if file exists/33e235b3e802457492251bc0c05ce35e/2e923016c5754d05a3af5b3b8024a7e6",
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "encrypt data using XTEA/10ee0a8316f84c4781969a6e3e0ea247/811ca4c4f8d549569ea2aaef177bf1ac",
-    "check OS version/cc7cda0bb6bc4f05b55778302fc52afe",
-    "encrypt data using TEA/d92840dc497d469aaa95c1543453a00c/e07fefb4fc9348cdbcc471f43936d29f",
+    "decrypt data using TEA/ab7f9f2b007f48f680d6bcb7da99c5f3/228e05560ef647b99ab605fac0daf580",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "hash data using djb2/9bc6b91561f04ebca409510ba6653174",
     "contain loop",
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494",
-    "hash data using jshash/a755d430eadb46a9b4c9d318a1fcf472",
-    "check OS version/db23a9b0019e461d9805d8493bc39112",
-    "hash data with CRC32/6874091fc240423886717926d876159d",
-    "check for kernel debugger via shared user data structure/300b95c5a43549898dd5e28afc704e20",
-    "encrypt data using XXTEA/41ded627096c472a8da56bad13f19605/19c5b9e7682744d8b574f82a4f55cf68",
-    "allocate or change RW memory/b4e5a298cb404535abd304755b86823e",
-    "check OS version/1297d641bc10439a81c4e39d3161d5ae"
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "encrypt data using TEA/125a16c5ca784de5b4ec344bb7f45260/b9272fb9d4744824873ec7d3c8013c6c",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "hash data using jshash/495bfd597bd14a45826758e92f604bf6",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "encrypt data using XXTEA/55da17cb2d2b4f30ac54eab7c66fa3d3/053ec9add6b744e4993f7dc6e62f924f",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "check if file exists/e9b7e5653fc74459b4a2998e8ac0c76d/291bac4dc2fd4faeafd7747b61108764",
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "encrypt data using XTEA/5c1c4c90f3124e8b8e496a40b647bc29/214603c8f1d64a2ea9add8dd99e7e802",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "allocate or change RW memory/877cb0b79bfa432e8e79b8bd20fa354f",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828"
   ],
   "disassembly": [
     "endbr64 ",
@@ -576,5 +576,8 @@
     "sub     r12, 0x4",
     "cmp     r15d, r14d",
     "jg      0x8bf00"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

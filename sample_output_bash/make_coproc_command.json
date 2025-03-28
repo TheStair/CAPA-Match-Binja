@@ -1,8 +1,8 @@
 {
   "address": "0x43960",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
-    "connect to WMI namespace via WbemLocator/a82a9565904b4f24bb74c2688f836d4e"
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
   ],
   "disassembly": [
     "endbr64 ",
@@ -69,5 +69,8 @@
     "pop     r15",
     "pop     rbp",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "address": "0xdb060",
   "rules": [
-    "check for time delay via GetTickCount/52f86f6d7253482ca8f0e5163432b494"
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a"
   ],
   "disassembly": [
     "endbr64 ",
@@ -40,5 +40,8 @@
     "lea     rdx, [rel data_1693c0]",
     "movzx   eax, byte [rdx+rax]",
     "mov     byte [rbx], al"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

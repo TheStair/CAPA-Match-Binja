@@ -1,10 +1,10 @@
 {
   "address": "0x66820",
   "rules": [
-    "decrypt data using TEA/b2f1d7a7bfa04984a8dca63866a95e23/c44dc1a0c7a84803bfadfa0a28a31b83",
-    "encrypt data using XXTEA/8b51ac557ada4334b6544ffbf490740a/5b90c8c385b241e7ab1fa72681f51c3f",
-    "encrypt data using TEA/6daa315fd3424f3e9ddc04a16106b42a/da8a9bb2a30748daa49fe239ad61edd2",
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a"
+    "encrypt data using XXTEA/c3f2a9482f0d43a8bf071fa39e1b4168/c4ca7bfb577a49f4aa924cd71c1d4bfa",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "decrypt data using TEA/e3455f541322464e87e33d73effdac9c/2f647bab2e344493baea90ef9b7387ed",
+    "encrypt data using TEA/f68c13fdd9924dacbb04fb3766fcc8ea/f4f005346e96448ea67ed2caa193f805"
   ],
   "disassembly": [
     "endbr64 ",
@@ -62,5 +62,8 @@
     "pop     r12",
     "pop     rbp",
     "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "address": "0xd9380",
   "rules": [
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
     "contain loop"
   ],
   "disassembly": [
@@ -111,5 +111,8 @@
     "mov     rdx, qword [rbp-0x38]",
     "sub     rdx, qword [fs:0x28]",
     "jne     0xd952f"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

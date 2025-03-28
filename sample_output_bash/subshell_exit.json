@@ -26,5 +26,8 @@
     "mov     edi, ebx",
     "call    exit",
     "{ Does not return }"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }

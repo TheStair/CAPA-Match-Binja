@@ -1,14 +1,14 @@
 {
   "address": "0x10aaf0",
   "rules": [
-    "write file on Windows/3772193b67764012b0d59bdbe7fe5d9a",
-    "create or open file",
-    "validate payment card number using luhn algorithm with no lookup table/62880de69d1941c9b68bc888f21444df",
     "read file on Linux",
+    "create or open file",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c",
     "write file on Linux",
-    "encrypt data using RC4 KSA/89b7ba675fcb4f4eac2317f83c0a9436",
     "contain loop",
     "get file attributes",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
     "change file permission on Linux",
     "delete file on Linux"
   ],
@@ -358,5 +358,8 @@
     "mov     dword [rax], ebx",
     "test    r15b, r15b",
     "je      0x10af97"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
   ]
 }
