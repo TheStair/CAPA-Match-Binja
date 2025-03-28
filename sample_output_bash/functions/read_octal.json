@@ -1,0 +1,34 @@
+{
+  "address": "0xa7990",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "xor     ecx, ecx",
+    "xor     edx, edx",
+    "jmp     0xa79b0",
+    "movsx   eax, byte [rdi+rcx]",
+    "lea     esi, [rax-0x30]",
+    "cmp     sil, 0x7",
+    "jbe     0xa79a0",
+    "lea     edx, [rax+rdx*8-0x30]",
+    "add     rcx, 0x1",
+    "cmp     edx, 0xfff",
+    "jg      0xa79d0",
+    "test    ecx, ecx",
+    "je      0xa79d0",
+    "mov     edx, 0xffffffff",
+    "mov     eax, edx",
+    "retn    ",
+    "test    al, al",
+    "jne     0xa79d0",
+    "mov     eax, edx",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

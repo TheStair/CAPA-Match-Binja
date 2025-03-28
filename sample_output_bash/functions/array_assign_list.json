@@ -1,0 +1,42 @@
+{
+  "address": "0x92270",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "mov     r13, rdi",
+    "push    r12",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "test    rsi, rsi",
+    "je      0x922ae",
+    "add     rsp, 0x8",
+    "mov     rax, r13",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    ",
+    "mov     rbx, rsi",
+    "xor     r12d, r12d",
+    "nop     ",
+    "mov     rax, qword [rbx+0x8]",
+    "mov     rsi, r12",
+    "mov     rdi, r13",
+    "add     r12, 0x1",
+    "mov     rdx, qword [rax]",
+    "call    array_insert",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "jne     0x92290"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

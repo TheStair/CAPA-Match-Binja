@@ -1,0 +1,48 @@
+{
+  "address": "0xb18e0",
+  "rules": [
+    "encrypt data using Curve25519/a423aa5d0923438c8eac88d5abe4fcd5",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "mov     eax, dword [rdi]",
+    "cmp     eax, 0x9",
+    "jne     0xb1901",
+    "cmp     eax, 0x4",
+    "je      0xb192c",
+    "mov     rax, qword [rdi+0x18]",
+    "mov     rbx, qword [rax+0x8]",
+    "mov     eax, dword [rbx]",
+    "mov     rdi, rbx",
+    "call    should_suppress_fork",
+    "test    eax, eax",
+    "je      0xb190b",
+    "cmp     eax, 0x6",
+    "je      0xb1918",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "mov     rax, qword [rbx+0x18]",
+    "or      dword [rbx+0x4], 0x40",
+    "mov     rbx, qword [rbp-0x8]",
+    "or      dword [rax], 0x40",
+    "leave   ",
+    "retn    ",
+    "mov     rdi, rbx",
+    "call    can_optimize_connection",
+    "test    eax, eax",
+    "je      0xb190b",
+    "mov     rax, qword [rbx+0x18]",
+    "mov     rbx, qword [rax+0x10]"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

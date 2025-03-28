@@ -1,0 +1,46 @@
+{
+  "address": "0xe0ad0",
+  "rules": [
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12d, esi",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "mov     rdi, qword [rdi+0x8]",
+    "test    rdi, rdi",
+    "je      0xe0aef",
+    "mov     rdi, qword [rbx+0x20]",
+    "test    rdi, rdi",
+    "je      0xe0afd",
+    "call    free",
+    "mov     rdi, qword [rbx+0x18]",
+    "test    rdi, rdi",
+    "je      0xe0b0b",
+    "call    free",
+    "mov     rdi, rbx",
+    "call    free",
+    "lea     rax, [rel _rl_nscxt]",
+    "mov     qword [rax], 0x0",
+    "lea     rax, [rel rl_readline_state]",
+    "and     qword [rax], 0xfffffffffffffeff",
+    "xor     eax, eax",
+    "cmp     r12d, 0x1",
+    "pop     rbx",
+    "setne   al",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "call    free"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "address": "0xd9ec0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "encrypt data using RC4 KSA/c5d66f4fda884d55848eab5cc630b98c",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "movzx   eax, byte [rdi]",
+    "test    edx, edx",
+    "js      0xd9f10",
+    "xor     esi, esi",
+    "mov     eax, esi",
+    "retn    ",
+    "test    al, al",
+    "je      0xd9f10",
+    "mov     ecx, 0x1",
+    "xor     esi, esi",
+    "nop     word [rax+rax]",
+    "and     eax, 0xc0",
+    "cmp     eax, 0x80",
+    "setne   al",
+    "movzx   eax, al",
+    "add     esi, eax",
+    "movzx   eax, byte [rdi+rcx]",
+    "cmp     edx, ecx",
+    "setge   r9b",
+    "test    al, al",
+    "setne   r8b",
+    "add     rcx, 0x1",
+    "test    r9b, r8b",
+    "jne     0xd9ee0",
+    "mov     eax, esi",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

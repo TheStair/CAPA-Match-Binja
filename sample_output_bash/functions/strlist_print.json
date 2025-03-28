@@ -1,0 +1,51 @@
+{
+  "address": "0xd6b30",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0xd6ba0",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r14",
+    "push    r13",
+    "push    r12",
+    "mov     r12, rdi",
+    "push    rbx",
+    "mov     eax, dword [rdi+0xc]",
+    "test    eax, eax",
+    "jle     0xd6b95",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     r14",
+    "pop     rbp",
+    "retn    ",
+    "test    rsi, rsi",
+    "lea     rax, [rel data_122e02]",
+    "lea     r14, [rel data_12161c[6]]  {\"%s%s\\n\"}",
+    "cmovne  rax, rsi",
+    "xor     ebx, ebx",
+    "mov     r13, rax",
+    "nop     dword [rax+rax]",
+    "mov     rax, qword [r12]",
+    "mov     rdx, r13",
+    "mov     rsi, r14",
+    "mov     edi, 0x2",
+    "mov     rcx, qword [rax+rbx*8]",
+    "xor     eax, eax",
+    "add     rbx, 0x1",
+    "call    __printf_chk",
+    "cmp     dword [r12+0xc], ebx",
+    "jg      0xd6b70"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

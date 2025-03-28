@@ -1,0 +1,21 @@
+{
+  "address": "0x883e0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel pending_traps]",
+    "movsxd  rdx, edi",
+    "mov     dword [rel data_168788], 0x1",
+    "add     dword [rax+rdx*4], 0x1",
+    "lea     rax, [rel trapped_signal_received]",
+    "mov     dword [rax], edi",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

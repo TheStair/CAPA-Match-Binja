@@ -1,0 +1,39 @@
+{
+  "address": "0x424a0",
+  "rules": [
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "cmp     byte [rdi], 0x2f",
+    "je      0x424e0",
+    "cmp     byte [rdi+0x1], 0x0",
+    "mov     rax, rdi",
+    "jne     0x424b5",
+    "mov     rdi, rbx",
+    "mov     esi, 0x2f",
+    "call    strrchr",
+    "lea     rdx, [rax+0x1]",
+    "test    rax, rax",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "cmovne  rax, rdx",
+    "retn    ",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

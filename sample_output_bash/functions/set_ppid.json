@@ -1,0 +1,51 @@
+{
+  "address": "0x59320",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "decompress data using LZO/8468a5c914d04c88af12e408441e5adc",
+    "get current PID on Linux"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "lea     r12, [rel data_11ff6a]  {\"PPID\"}",
+    "push    rbx",
+    "sub     rsp, 0x20",
+    "mov     rax, qword [fs:0x28]",
+    "mov     qword [rbp-0x18], rax",
+    "xor     eax, eax",
+    "call    getppid",
+    "xor     r8d, r8d",
+    "lea     rdx, [rbp-0x24]",
+    "mov     ecx, 0xc",
+    "movsxd  rdi, eax",
+    "mov     esi, 0xa",
+    "call    fmtulong",
+    "mov     rdi, r12",
+    "mov     rbx, rax",
+    "call    find_variable",
+    "test    rax, rax",
+    "je      0x59377",
+    "xor     edx, edx",
+    "mov     rsi, rbx",
+    "mov     rdi, r12",
+    "call    bind_variable",
+    "or      dword [rax+0x28], 0x12",
+    "mov     rax, qword [rbp-0x18]",
+    "sub     rax, qword [fs:0x28]",
+    "jne     0x593a0",
+    "and     dword [rax+0x28 {Elf64_Header::section_header_offset.d}], 0xfffffffc {Elf64_Header::section_header_offset.d}",
+    "call    __stack_chk_fail",
+    "{ Does not return }",
+    "add     rsp, 0x20",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

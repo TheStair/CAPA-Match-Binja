@@ -1,0 +1,29 @@
+{
+  "address": "0x667f0",
+  "rules": [
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "encrypt data using Curve25519/7d070d905d0942e295bbb2c9df72fc86",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "call    sub_66750",
+    "pop     rbp",
+    "mov     edx, eax",
+    "and     eax, 0x7f",
+    "and     edx, 0x7f",
+    "add     edx, 0x1",
+    "cmp     dl, 0x1",
+    "mov     edx, 0x0",
+    "cmovle  eax, edx",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

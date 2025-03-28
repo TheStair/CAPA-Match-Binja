@@ -1,0 +1,48 @@
+{
+  "address": "0xdeae0",
+  "rules": [
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "connect to WMI namespace via WbemLocator/472165133b624c67bbc5d17c3915a018"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "pxor    xmm0, xmm0",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "mov     rbx, rdi",
+    "sub     rsp, 0x8",
+    "mov     eax, dword [rdi+0x14]",
+    "movups  xmmword [rdi], xmm0",
+    "test    al, 0x1",
+    "je      0xdeb19",
+    "mov     rdi, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "jmp     free",
+    "mov     dword [rdi+0x18], 0x0",
+    "test    ah, 0x2",
+    "jne     0xdeb30",
+    "xor     esi, esi",
+    "xor     edi, edi",
+    "call    falarm",
+    "mov     rsi, qword [rbx+0x28]",
+    "test    rsi, rsi",
+    "jne     0xdeb13",
+    "mov     rsi, qword [rbx+0x28]",
+    "test    rsi, rsi",
+    "je      0xdeb19",
+    "test    byte [rbx+0x15], 0x1",
+    "jne     0xdeb48",
+    "jmp     0xdeb19",
+    "mov     edi, 0xe",
+    "call    set_signal_handler",
+    "mov     rdi, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "jmp     free"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

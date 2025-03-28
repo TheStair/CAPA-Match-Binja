@@ -1,0 +1,51 @@
+{
+  "address": "0xfd410",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     edi, esi",
+    "je      0xfd470",
+    "lea     rdx, [rel _rl_last_command_was_kill]",
+    "mov     eax, dword [rdx]",
+    "add     eax, 0x1",
+    "mov     dword [rdx], eax",
+    "xor     eax, eax",
+    "retn    ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r13",
+    "push    r12",
+    "mov     r12d, edi",
+    "push    rbx",
+    "mov     ebx, esi",
+    "sub     rsp, 0x8",
+    "call    rl_copy_text",
+    "mov     esi, ebx",
+    "mov     edi, r12d",
+    "mov     r13, rax",
+    "call    rl_delete_text",
+    "xor     esi, esi",
+    "cmp     r12d, ebx",
+    "mov     rdi, r13",
+    "setl    sil",
+    "call    sub_112090",
+    "lea     rdx, [rel _rl_last_command_was_kill]",
+    "mov     eax, dword [rdx]",
+    "add     eax, 0x1",
+    "mov     dword [rdx], eax",
+    "add     rsp, 0x8",
+    "xor     eax, eax",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     rbp",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

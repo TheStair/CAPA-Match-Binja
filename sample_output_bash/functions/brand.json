@@ -1,0 +1,44 @@
+{
+  "address": "0xda1d0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "hash data with CRC32/a62eba34c54041488d4eb8afa76fce3c",
+    "hash data using murmur3/e01a16258f3f411ebdc09e09aa03f30a/841f5b4e2e6a480b888bec60dcabe797",
+    "decompress data using aPLib/c6c954600822435a9c47b62afd183d7b"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "mov     edx, dword [rel data_1597e8]",
+    "mov     eax, 0x1f0cce42",
+    "test    edx, edx",
+    "je      0xda21a",
+    "lea     rdx, [rel shell_compatibility_level]",
+    "mov     dword [rel data_1597e8], eax",
+    "cmp     dword [rdx], 0x32",
+    "jle     0xda236",
+    "mov     ecx, edx",
+    "mov     eax, edx",
+    "imul    rcx, rcx, 0x69c16bd",
+    "shr     rcx, 0x20",
+    "sub     eax, ecx",
+    "shr     eax, 0x1",
+    "add     eax, ecx",
+    "shr     eax, 0x10",
+    "imul    ecx, eax, 0x1f31d",
+    "imul    eax, eax, 0xfffff4ec",
+    "sub     edx, ecx",
+    "imul    edx, edx, 0x41a7",
+    "add     edx, eax",
+    "lea     eax, [rdx+0x7fffffff]",
+    "cmovns  eax, edx",
+    "and     eax, 0x7fff",
+    "retn    ",
+    "mov     edx, eax",
+    "movzx   eax, ax",
+    "shr     edx, 0x10",
+    "xor     eax, edx"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

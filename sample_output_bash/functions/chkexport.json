@@ -1,0 +1,34 @@
+{
+  "address": "0x5ed90",
+  "rules": [
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "sub     rsp, 0x10",
+    "call    find_variable",
+    "mov     rdx, rax",
+    "xor     eax, eax",
+    "test    rdx, rdx",
+    "je      0x5edb3",
+    "leave   ",
+    "retn    ",
+    "mov     eax, dword [rdx+0x28 {Elf64_Header::section_header_offset.d}]",
+    "and     eax, 0x1",
+    "jne     0x5edb8",
+    "lea     rdx, [rel array_needs_making]",
+    "mov     dword [rbp-0x4], eax",
+    "mov     dword [rdx], 0x1",
+    "call    sub_5ea30",
+    "mov     eax, dword [rbp-0x4]",
+    "leave   ",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

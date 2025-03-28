@@ -1,0 +1,29 @@
+{
+  "address": "0x884d0",
+  "rules": [
+    "encrypt data using HC-128/e8f9b1d76e624bf6b554df630e614cdc",
+    "encrypt data using XXTEA/55da17cb2d2b4f30ac54eab7c66fa3d3/bfdff12b2adb42709a78f0e77631902b",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "allocate or change RW memory/877cb0b79bfa432e8e79b8bd20fa354f",
+    "hash data using aphash/416ed7212e694999bd9567d4aa818bae"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rdi, [rel pending_traps]",
+    "mov     qword [rdi+0x4], 0x0",
+    "lea     rax, [rdi+0x4]",
+    "add     rdi, 0xc",
+    "mov     qword [rdi+0xf0], 0x0",
+    "and     rdi, 0xfffffffffffffff8",
+    "sub     rax, rdi",
+    "add     eax, 0x100",
+    "shr     eax, 0x3",
+    "mov     ecx, eax",
+    "xor     eax, eax",
+    "rep stosq qword [rdi]",
+    "retn    "
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

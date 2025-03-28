@@ -1,0 +1,21 @@
+{
+  "address": "0x107e70",
+  "rules": [
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "log keystrokes via raw input data/5b32ff98460e406e86dc2ef8d82ba1a5",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel _rl_screenwidth]",
+    "mov     edi, dword [rax]",
+    "lea     rax, [rel _rl_term_autowrap]",
+    "cmp     dword [rax], 0x1",
+    "adc     edi, 0x0",
+    "jmp     rl_forward_char"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

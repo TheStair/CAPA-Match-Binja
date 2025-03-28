@@ -1,0 +1,27 @@
+{
+  "address": "0x5b380",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     qword [rdi], 0x0",
+    "je      0x5b3b0",
+    "xor     esi, esi",
+    "jmp     0x5b39f",
+    "mov     eax, 0x1",
+    "nop     ",
+    "lea     rcx, [rel sub_5acd0]",
+    "mov     edx, 0x8",
+    "jmp     qsort",
+    "mov     rsi, rax",
+    "add     rax, 0x1",
+    "cmp     qword [rdi+rax*8-0x8], 0x0",
+    "jne     0x5b390"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

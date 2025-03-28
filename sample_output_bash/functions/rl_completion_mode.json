@@ -1,0 +1,35 @@
+{
+  "address": "0xe0d00",
+  "rules": [
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "log keystrokes via raw input data/5b32ff98460e406e86dc2ef8d82ba1a5",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "lea     rax, [rel rl_last_func]",
+    "cmp     qword [rax], rdi",
+    "je      0xe0d38",
+    "mov     ecx, dword [rel data_1689a8]",
+    "mov     eax, 0x3f",
+    "test    ecx, ecx",
+    "jne     0xe0d10",
+    "lea     rdx, [rel _rl_complete_show_all]",
+    "mov     eax, 0x21",
+    "mov     edx, dword [rdx]",
+    "test    edx, edx",
+    "jne     0xe0d34",
+    "retn    ",
+    "retn    ",
+    "lea     rax, [rel _rl_complete_show_unmodified]",
+    "cmp     dword [rax], 0x1",
+    "sbb     eax, eax",
+    "and     eax, 0xffffffc9",
+    "add     eax, 0x40"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

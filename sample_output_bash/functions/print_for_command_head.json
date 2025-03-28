@@ -1,0 +1,52 @@
+{
+  "address": "0x47780",
+  "rules": [
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "contain loop",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r14",
+    "push    r13",
+    "push    r12",
+    "push    rbx",
+    "mov     rax, qword [rdi+0x8]",
+    "mov     rbx, rdi",
+    "lea     rdi, [rel data_11fb28]  {\"for %s in \"}",
+    "mov     rsi, qword [rax]",
+    "xor     eax, eax",
+    "call    sub_473b0",
+    "mov     rbx, qword [rbx+0x10]",
+    "test    rbx, rbx",
+    "je      0x477ec",
+    "pop     rbx",
+    "pop     r12",
+    "pop     r13",
+    "pop     r14",
+    "pop     rbp",
+    "retn    ",
+    "lea     r14, [rel data_11fbd6[2]]  {\"%s%s\"}",
+    "lea     r13, [rel data_122e02]",
+    "lea     r12, [rel data_1204ae[4]]  {\" \"}",
+    "nop     dword [rax]",
+    "mov     rax, qword [rbx+0x8]",
+    "cmp     qword [rbx], 0x0",
+    "mov     rdx, r12",
+    "mov     rdi, r14",
+    "cmove   rdx, r13",
+    "mov     rsi, qword [rax]",
+    "xor     eax, eax",
+    "call    sub_473b0",
+    "mov     rbx, qword [rbx]",
+    "test    rbx, rbx",
+    "jne     0x477c8"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

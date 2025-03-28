@@ -1,0 +1,48 @@
+{
+  "address": "0xc8580",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "write file on Windows/dbc9cc37967145a499adfa89f5005055",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "test    rdi, rdi",
+    "je      0xc8600",
+    "retn    ",
+    "xor     eax, eax",
+    "xor     r9d, r9d",
+    "xor     r8d, r8d",
+    "xor     ecx, ecx",
+    "xor     edx, edx",
+    "jmp     0xc85c7",
+    "lea     rsi, [rdx*4]",
+    "mov     edx, dword [rdi+rdx*4]",
+    "test    edx, edx",
+    "jne     0xc85a0",
+    "cmp     edx, 0x5c",
+    "jne     0xc85ac",
+    "movsxd  r8, r8d",
+    "mov     dword [rdi+r8*4], 0x0",
+    "retn    ",
+    "add     ecx, 0x1",
+    "mov     dword [rdi+rax*4], edx",
+    "add     rax, 0x1",
+    "movsxd  rdx, ecx",
+    "mov     esi, dword [rdi+rdx*4-0x4]",
+    "test    esi, esi",
+    "je      0xc85e8",
+    "mov     edx, dword [rdi+rsi+0x4]",
+    "add     ecx, 0x1",
+    "lea     r8d, [r9+0x1]",
+    "movsxd  r8, r8d",
+    "mov     dword [rdi+r8*4], 0x0",
+    "retn    ",
+    "mov     r9d, eax",
+    "mov     r8d, eax"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

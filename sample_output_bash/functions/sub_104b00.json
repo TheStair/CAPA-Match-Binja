@@ -1,0 +1,48 @@
+{
+  "address": "0x104b00",
+  "rules": [
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "hash data with CRC32/b31bffa9a15b460bbcbd04d2822872fb",
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "hash data using aphash/e04b32e4de024de7af9a97876e98ac22",
+    "contain loop",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3",
+    "check for kernel debugger via shared user data structure/6be60e61779449d185f0bab196679834",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2",
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc"
+  ],
+  "disassembly": [
+    "movsxd  r8, dword [rsi]",
+    "movzx   eax, byte [rdi+r8]",
+    "mov     rcx, r8",
+    "test    al, al",
+    "je      0x104b53",
+    "mov     dword [rsi], ecx",
+    "retn    ",
+    "cmp     al, 0x27",
+    "je      0x104b53",
+    "and     edx, 0x1",
+    "jmp     0x104b33",
+    "cmp     al, 0x5c",
+    "jne     0x104b20",
+    "add     ecx, 0x1",
+    "movsxd  r8, ecx",
+    "movzx   eax, byte [rdi+r8]",
+    "test    al, al",
+    "je      0x104b53",
+    "test    dl, dl",
+    "je      0x104b20",
+    "cmp     al, 0x27",
+    "je      0x104b53",
+    "cmp     byte [rdi+r8+0x1], 0x1",
+    "sbb     ecx, 0xffffffff",
+    "add     ecx, 0x1",
+    "movsxd  r8, ecx",
+    "movzx   eax, byte [rdi+r8]",
+    "test    al, al",
+    "jne     0x104b2f"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "address": "0xe0800",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "mov     rbp, rsp",
+    "push    r12",
+    "mov     r12d, dword [rel data_16a4cc]",
+    "push    rbx",
+    "test    r12d, r12d",
+    "jne     0xe0855",
+    "pop     rbx",
+    "pop     r12",
+    "pop     rbp",
+    "retn    ",
+    "lea     rbx, [rel data_156648]",
+    "lea     rdi, [rel data_1220c3]  {\"abort\"}",
+    "nop     dword [rax]",
+    "mov     rsi, qword [rbx]",
+    "add     rbx, 0x10",
+    "add     r12d, 0x1",
+    "call    rl_add_funmap_entry",
+    "mov     rdi, qword [rbx-0x8]",
+    "test    rdi, rdi",
+    "jne     0xe0828",
+    "lea     rax, [rel funmap_program_specific_entry_start]",
+    "mov     dword [rel data_16a4cc], 0x1",
+    "mov     dword [rax], r12d"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

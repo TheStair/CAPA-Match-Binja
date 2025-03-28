@@ -49,11 +49,13 @@ def get_input_file():
 # After looking throught the CAPA repo, I found that capa has a binary ninja backend. So to avoid wrestling
 # with different address spaces, I opted to use their binja backend
 capabilities = []
+overall_matches = []
 def capa_analyze(file_path):
     global capabilities
+    global overall_matches
     print("Running CAPA Analysis")
-    # rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
-    rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
+    rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
+    # rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
     #Sets capa's path to the rules
     rules = capa.rules.get_rules([rules_path])
 
@@ -65,7 +67,8 @@ def capa_analyze(file_path):
             rules, extractor, disable_progress=True
         )
 
-    
+    for rule_name, match_list in capabilities.matches.items():
+        overall_matches.append(rule_name)
     # Fetches additional data (Not really used)
     # meta = capa.loader.collect_metadata(
     #         [], file_path, "auto", "auto", [rules_path], extractor, counts)
@@ -135,10 +138,17 @@ def generate_jsons(bv, input_file):
     output_dir = os.path.join(os.getcwd(), base + "_matches")
     os.makedirs(output_dir, exist_ok=True)
 
+    function_dir = os.path.join(output_dir, "functions")
+    os.makedirs(function_dir, exist_ok=True)
+
     for func_name, data in function_data.items():
-        output_file = os.path.join(output_dir, f"{func_name}.json")
+        output_file = os.path.join(function_dir, f"{func_name}.json")
         with open(output_file, "w") as out_file:
             json.dump(data, out_file, indent=2)
+
+    output_file = os.path.join(output_dir, f"overall_matches.json")
+    with open(output_file, "w") as out_file:
+        json.dump(overall_matches, out_file, indent=2)
     
     print(f"Matched functions stored in {output_dir}/")
 
@@ -160,7 +170,6 @@ while t == True:
     # Run analysis
     capa_analyze(input_file)
     generate_jsons(load_binja(input_file), input_file)
-
     loop_check = input("Would you like to analyze another file? (y/n) ").strip().lower()
 
     if loop_check == "y":

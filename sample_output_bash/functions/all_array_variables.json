@@ -1,0 +1,43 @@
+{
+  "address": "0x5b1c0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "push    rbp",
+    "lea     rdi, [rel sub_5ab60]",
+    "mov     rbp, rsp",
+    "push    rbx",
+    "sub     rsp, 0x8",
+    "lea     rax, [rel shell_variables]",
+    "mov     rsi, qword [rax]",
+    "call    map_over",
+    "mov     rbx, rax",
+    "test    rax, rax",
+    "je      0x5b223",
+    "mov     rax, rbx",
+    "mov     rbx, qword [rbp-0x8]",
+    "leave   ",
+    "retn    ",
+    "cmp     qword [rax {Elf64_Header::ident.signature[0].q}], 0x0",
+    "je      0x5b230",
+    "xor     esi, esi",
+    "jmp     0x5b20f",
+    "mov     edx, 0x1",
+    "nop     word [rax+rax]",
+    "lea     rcx, [rel sub_5acd0]",
+    "mov     edx, 0x8",
+    "mov     rdi, rbx",
+    "call    qsort",
+    "mov     rsi, rdx",
+    "add     rdx, 0x1",
+    "cmp     qword [rbx+rdx*8-0x8], 0x0",
+    "jne     0x5b200"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

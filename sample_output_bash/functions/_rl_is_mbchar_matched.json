@@ -1,0 +1,36 @@
+{
+  "address": "0x1052e0",
+  "rules": [
+    "validate payment card number using luhn algorithm with no lookup table/2ca16ccf2c974f3f90e3b8d02944442a",
+    "check for time delay via GetTickCount/173be9e5d4d440c09f85224fcb793b6a",
+    "contain loop",
+    "populate SysWhispers2 syscall list/074b321f7b7941958bfc8de4f583b5b2"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "sub     edx, esi",
+    "xor     eax, eax",
+    "cmp     edx, r8d",
+    "jl      0x105315",
+    "retn    ",
+    "test    r8d, r8d",
+    "jle     0x105320",
+    "mov     eax, 0x1",
+    "retn    ",
+    "movsxd  rsi, esi",
+    "movsxd  r8, r8d",
+    "xor     eax, eax",
+    "lea     rdx, [rdi+rsi]",
+    "jmp     0x105309",
+    "movzx   edi, byte [rcx+rax]",
+    "cmp     byte [rdx+rax], dil",
+    "je      0x105300",
+    "add     rax, 0x1",
+    "cmp     r8, rax",
+    "je      0x105320",
+    "xor     eax, eax"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}

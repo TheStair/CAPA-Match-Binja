@@ -1,0 +1,25 @@
+{
+  "address": "0x105880",
+  "rules": [
+    "check OS version/35d8fd86b2bf418898b01c7af02eb9bc",
+    "check OS version/0e7e919fd4d74b758d9097ed7c3be828",
+    "check OS version/a792de506c61438eae0e98a59003db67",
+    "check Internet connectivity via WinINet/4ebebc1fd30e4dc8aec0393f85edc8f3"
+  ],
+  "disassembly": [
+    "endbr64 ",
+    "cmp     qword [rel data_1688b8], 0x0",
+    "mov     eax, 0x1",
+    "je      0x1058ab",
+    "retn    ",
+    "lea     rdx, [rel history_offset]",
+    "lea     rax, [rel history_length]",
+    "mov     eax, dword [rax]",
+    "cmp     dword [rdx], eax",
+    "sete    al",
+    "movzx   eax, al"
+  ],
+  "high level IL": [
+    "No High Level IL Loaded"
+  ]
+}
