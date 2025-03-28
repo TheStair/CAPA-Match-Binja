@@ -48,7 +48,9 @@ def get_input_file():
 # Each JSON contains the function name, address, matched rules, and disassembly
 # After looking throught the CAPA repo, I found that capa has a binary ninja backend. So to avoid wrestling
 # with different address spaces, I opted to use their binja backend
+capabilities = []
 def capa_analyze(file_path):
+    global capabilities
     print("Running CAPA Analysis")
     # rules_path = Path("/home/thestair/Documents/Spring-2025/Program Analysis/CAPA-Match-Binja/capa-rules-9.1.0/")
     rules_path = Path("/home/thestair/Documents/Program-Analysis/CAPA-Match-Binja/capa-rules-9.1.0")
@@ -59,7 +61,7 @@ def capa_analyze(file_path):
     extractor = capa.loader.get_extractor(file_path, "auto", "auto", capa.main.BACKEND_BINJA, [], False, disable_progress=True,)
     
     #Runs the actual Analysis
-    capabilities = counts = capa.main.find_capabilities(
+    capabilities = capa.main.find_capabilities(
             rules, extractor, disable_progress=True
         )
 
@@ -67,11 +69,17 @@ def capa_analyze(file_path):
     # Fetches additional data (Not really used)
     # meta = capa.loader.collect_metadata(
     #         [], file_path, "auto", "auto", [rules_path], extractor, counts)
-    
+
+
+
+def load_binja(input_file):
     with load(input_file) as bv:
         print("Loaded file into Binary Ninja")
+        bv.update_analysis_and_wait()
+    return bv
 
 
+def generate_jsons(bv, input_file):
     function_data = {}
     for rule_name, match_list in capabilities.matches.items():
         for match in match_list:
@@ -94,14 +102,25 @@ def capa_analyze(file_path):
             # If the function has not been seen, add it's disassembly
             if func_name not in function_data:
                 disasm_lines = []
+                decomp_lines = []
                 for block in func.basic_blocks:
                     for line in block.disassembly_text:
                         disasm_lines.append(str(line))
+
+                try:
+                    hlil = func.hlil  # Accessing this triggers HLIL generation
+                    for block in hlil.basic_blocks:
+                        for instr in block:
+                            decomp_lines.append(str(instr))
+                except Exception as e:
+                    decomp_lines.append("No High Level IL Loaded")
+                            
 
                 function_data[func_name] = {
                     "address": hex(func.start),
                     "rules": set(),  # We'll use a set to avoid duplicates.
                     "disassembly": disasm_lines,
+                    "high level IL": decomp_lines,
                 }
 
             # Add the rule name to the function's rule set.
@@ -111,7 +130,9 @@ def capa_analyze(file_path):
     for func in function_data:
         function_data[func]["rules"] = list(function_data[func]["rules"])
     
-    output_dir = "matched_functions"
+    base = os.path.basename(input_file)
+    # Create the output directory name by appending "_matches"
+    output_dir = os.path.join(os.getcwd(), base + "_matches")
     os.makedirs(output_dir, exist_ok=True)
 
     for func_name, data in function_data.items():
@@ -126,12 +147,25 @@ def capa_analyze(file_path):
 # Script Start
 # ------------------------------------------------------------------------------------------------------------
 #Loads user-specified file
-input_file = get_input_file()
+t = True
+while t == True:
+    input_file = ""
+    input_file = get_input_file()
 
 
-# Make output folder
-# output_folder = "debugging_artifacts"
-# os.makedirs(output_folder, exist_ok=True)
+    # Make output folder
+    # output_folder = "debugging_artifacts"
+    # os.makedirs(output_folder, exist_ok=True)
 
-# Run analysis
-capa_analyze(input_file)
+    # Run analysis
+    capa_analyze(input_file)
+    generate_jsons(load_binja(input_file), input_file)
+
+    loop_check = input("Would you like to analyze another file? (y/n) ").strip().lower()
+
+    if loop_check == "y":
+        t = True
+    
+    else:
+        print("\nGoodbye!")
+        sys.exit()
